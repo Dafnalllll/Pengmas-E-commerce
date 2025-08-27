@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
+    <title>Ras Umbi || 404 Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS (CDN for demo) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center bg-[#E0E0E0] px-4">
+    <div 
+        class=" p-10 flex flex-col items-center"
+        data-aos="zoom-in"
+        data-aos-duration="900"
+    >
+        <img src="/img/ikonrasaumbi.png" alt="Logo" class="h-12 w-auto mb-2 drop-shadow-lg" data-aos="fade-up" data-aos-delay="300">
+        <h1 class="text-4xl font-extrabold text-[#A52A2A] mb-2 tracking-widest" data-aos="fade-up" data-aos-delay="500">404</h1>
+        <p class="text-lg text-[#5C4B36] mb-6 font-semibold" data-aos="fade-up" data-aos-delay="700">Halaman tidak ditemukan</p>
+        <a href="/" class="px-6 py-1 bg-[#A52A2A] text-white rounded-full shadow hover:bg-[#8B1A1A] transform transition-all duration-200 font-bold text-lg" 
+        data-aos="fade-up" 
+        data-aos-delay="900">
+            Kembali ke Beranda
+        </a>
+    </div>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init();
+    });
+    </script>
+</body>
+</html>
