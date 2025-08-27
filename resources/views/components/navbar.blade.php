@@ -2,8 +2,8 @@
 <nav class="fixed top-0 left-0 w-full z-50 bg-[#A52A2A] bg-opacity-90 flex items-center justify-between px-20 py-4 shadow-md">
     <!-- Logo -->
     <div class="flex items-center">
-        <img src="/images/niranta-logo.png" alt="Niranta Logo" class="h-12 mr-4">
-        <span class="text-xs text-[#1A120B] font-medium">Gula Aren Asli</span>
+        <img src="/img/ikonrasaumbi.png" alt="Niranta Logo" class="h-12 mr-4">
+        <span class="text-xs text-[#E0E0E0] font-[Playfair Display] font-medium">Rasa Umbi</span>
     </div>
     <!-- Menu -->
     <ul class="flex space-x-8">
