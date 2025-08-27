@@ -1,5 +1,11 @@
 <!-- filepath: d:\Dafa Code\pengmase-ecommerce\resources\views\components\navbar.blade.php -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-[#A52A2A] bg-opacity-90 flex items-center justify-between px-20 py-4 shadow-md">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<nav 
+  class="fixed top-0 left-0 w-full z-50 bg-[#A52A2A] bg-opacity-90 flex items-center justify-between px-20 py-4 shadow-md"
+  data-aos="fade-down"
+  data-aos-duration="800"
+>
     <!-- Logo -->
     <div class="flex items-center">
         <img src="/img/ikonrasaumbi.png" alt="Niranta Logo" class="h-12 mr-4">
@@ -24,3 +30,8 @@
         </li>
     </ul>
 </nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init();
+  });
+</script>
