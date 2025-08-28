@@ -82,15 +82,14 @@
             </div>
 
             <!-- Social Login Icons -->
-            <div class="flex space-x-6 justify-center">
-                <a href="#" class="text-[#1A120B] hover:text-[#A0522D] text-2xl">
-                    <i class="fab fa-google"></i>
+            <div class="flex space-x-6 justify-center mt-4">
+                <!-- Google Logo -->
+                <a href="#" class="hover:opacity-80 hover:scale-110 transition-transform duration-200">
+                    <img src="/img/google.png" alt="Google Login" class="h-5 w-5 object-contain" />
                 </a>
-                <a href="#" class="text-[#1A120B] hover:text-[#A0522D] text-2xl">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="#" class="text-[#1A120B] hover:text-[#A0522D] text-2xl">
-                    <i class="fab fa-apple"></i>
+                <!-- Facebook Logo -->
+                <a href="#" class="hover:opacity-80 hover:scale-110 transition-transform duration-200">
+                    <img src="/img/facebook.png" alt="Facebook Login" class="h-5 w-5 object-contain" />
                 </a>
             </div>
         </div>
