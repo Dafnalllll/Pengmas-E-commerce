@@ -12,14 +12,7 @@
     <!-- Logo, Judul, Tagline -->
     <div class="flex items-center space-x-4">
         <img src="/img/ikonrasaumbi.png" alt="Rasa Umbi Logo" class="h-12 w-auto drop-shadow-lg">
-        <div class="flex flex-col">
-            <span class="text-xl font-semibold text-[#E0E0E0]" style="font-family: 'Cormorant Garamond', serif;">
-                Rasa Umbi
-            </span>
-            <span class="text-lg text-white font-light tracking-wide mt-1" style="font-family: 'Great Vibes', cursive;">
-                Rasa yang tumbuh dari bumi nusantara
-            </span>
-        </div>
+        
     </div>
     <!-- Menu -->
     <ul class="flex space-x-8">

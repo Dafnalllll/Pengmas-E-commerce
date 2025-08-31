@@ -16,8 +16,10 @@
         <source src="{{ asset('video/bawang4.mp4') }}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <!-- Overlay agar tulisan jelas -->
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
     <div 
-        class=" p-10 flex flex-col items-center"
+        class="p-10 flex flex-col items-center relative z-20"
         data-aos="zoom-in"
         data-aos-duration="900"
     >
@@ -27,7 +29,7 @@
         <a href="/"  
         class="px-6 py-1 bg-[#A52A2A] text-white rounded-full shadow hover:bg-[#8B1A1A] hover:scale-105 transition-all duration-300 font-bold text-lg flex items-center justify-center"
         >
-            Kembali ke Beranda
+            Kembali ke B
         </a>
     </div>
     <!-- AOS Animation JS -->
