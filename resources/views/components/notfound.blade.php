@@ -29,7 +29,7 @@
         <a href="/"  
         class="px-6 py-1 bg-[#A52A2A] text-white rounded-full shadow hover:bg-[#8B1A1A] hover:scale-105 transition-all duration-300 font-bold text-lg flex items-center justify-center"
         >
-            Kembali ke B
+            Kembali ke Beranda
         </a>
     </div>
     <!-- AOS Animation JS -->

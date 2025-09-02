@@ -32,12 +32,14 @@
         <!-- Konten di tengah -->
         <div class="min-h-screen flex flex-col items-center justify-center relative z-20">
             <div class="flex flex-col items-center">
-                <!-- Logo di atas caption -->
-                <img src="{{ asset('img/ikonrasaumbi.png') }}" alt="Rasa Umbi Logo" class="h-20 w-auto mb-4 drop-shadow-lg">
-                <span class="text-xl font-semibold text-[#E0E0E0]" style="font-family: 'Cormorant Garamond', serif;">
+                <span class="text-6xl font-bold text-[#E0E0E0]" style="font-family: 'Cormorant Garamond', serif;"
+                data-aos="fade-up"
+                data-aos-delay="500">
                     Rasa Umbi
                 </span>
-                <span class="text-lg text-white font-light tracking-wide mt-1" style="font-family: 'Great Vibes', cursive;">
+                <span class="text-4xl text-white font-light tracking-wide mt-1" style="font-family: 'Great Vibes', cursive;"
+                data-aos="fade-down"
+                data-aos-delay="600">
                     Rasa yang tumbuh dari bumi nusantara
                 </span>
             </div>
