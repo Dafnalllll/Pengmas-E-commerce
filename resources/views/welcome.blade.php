@@ -19,7 +19,7 @@
             </style>
         @endif
     </head>
-    <body class="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
+    <body class="bg-[#F8F3E7] relative overflow-x-hidden">
         <!-- Background Video -->
         <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
             <source src="{{ asset('video/bawang4.mp4') }}" type="video/mp4">
@@ -29,21 +29,24 @@
         {{-- Import Navbar --}}
         <x-navbar />
 
-        <!-- Konten di tengah -->
-        <div class="min-h-screen flex flex-col items-center justify-center relative z-20">
-            <div class="flex flex-col items-center">
-                <span class="text-6xl font-bold text-[#E0E0E0]" style="font-family: 'Cormorant Garamond', serif;"
-                data-aos="fade-up"
-                data-aos-delay="500">
-                    Rasa Umbi
-                </span>
-                <span class="text-4xl text-white font-light tracking-wide mt-1" style="font-family: 'Great Vibes', cursive;"
-                data-aos="fade-down"
-                data-aos-delay="600">
-                    Rasa yang tumbuh dari bumi nusantara
-                </span>
+        <div class="relative z-20">
+            <!-- Hero Section -->
+            <div class="min-h-screen flex flex-col items-center justify-center">
+                <div class="flex flex-col items-center">
+                    <span class="text-6xl font-bold text-[#E0E0E0]" style="font-family: 'Cormorant Garamond', serif;"
+                    data-aos="fade-up"
+                    data-aos-delay="500">
+                        Rasa Umbi
+                    </span>
+                    <span class="text-4xl text-white font-light tracking-wide mt-1" style="font-family: 'Great Vibes', cursive;"
+                    data-aos="fade-down"
+                    data-aos-delay="600">
+                        Rasa yang tumbuh dari bumi nusantara
+                    </span>
+                </div>
             </div>
+            <!-- Produk Section -->
+            <x-produksection />
         </div>
-    
     </body>
 </html>

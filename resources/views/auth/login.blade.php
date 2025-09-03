@@ -67,7 +67,9 @@
                     @endif
 
                     <x-primary-button 
-                        class="ml-3 px-6 py-2 rounded-xl font-bold bg-[#A52A2A] hover:bg-[#A52A2A] focus:bg-[#A52A2A] active:bg-[#A52A2A] text-white focus:outline-none focus:ring-0 border-none"
+                        class="ml-3 px-6 py-2 rounded-xl font-bold bg-[#A52A2A] hover:bg-[#A52A2A] focus:bg-[#A52A2A] active:bg-[#A52A2A] text-white 
+                               border-2  active:border-[#A52A2A] hover:border-[#A52A2A] 
+                               focus:outline-none focus:ring-0 focus:ring-transparent"
                     >
                         {{ __('Log in') }}
                     </x-primary-button>
