@@ -1,9 +1,10 @@
 <!-- filepath: d:\Dafa Code\pengmase-ecommerce\resources\views\components\product.blade.php -->
 <section class="bg-[#F8F3E7] py-16 px-4">
     <div class="max-w-5xl mx-auto text-center">
-        <div class="flex flex-col items-center mb-8">
-            <span class="text-[#A52A2A] font-bold text-sm mb-2 bg-[#F8F3E7] px-3 py-1 rounded-full border border-[#A52A2A]">80</span>
-            <h2 class="text-4xl md:text-5xl font-extrabold text-[#1A120B] mb-4 tracking-wide">OUR PRODUCT</h2>
+        <div class="flex flex-col items-center mb-8"
+        data-aos="fade-down"
+        data-aos-duration="800">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-[#A52A2A] mb-4 tracking-wide">PRODUK KAMI</h2>
         </div>
         <p class="text-xl text-[#1A120B] mb-12 font-medium">
             Menghadirkan gula aren murni dari alam, dengan proses tradisional yang menjaga cita rasa dan kualitas terbaik!
