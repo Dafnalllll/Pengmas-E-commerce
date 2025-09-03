@@ -17,19 +17,19 @@
     <!-- Menu -->
     <ul class="flex space-x-8">
         <li>
-            <a href="/" class="font-bold text-white hover:text-[#FFD6C0] transition">HOME</a>
+            <a href="/" class="font-bold text-white hover:text-[#da540c] transition">HOME</a>
         </li>
         <li>
-            <a href="/product" class="font-semibold text-white/80 hover:text-[#FFD6C0] transition">PRODUCT</a>
+            <a href="/product" class="font-semibold text-white/80 hover:text-[#da540c] transition">PRODUCT</a>
         </li>
         <li>
-            <a href="/recipe" class="font-semibold text-white/80 hover:text-[#FFD6C0] transition">RECIPE</a>
+            <a href="/recipe" class="font-semibold text-white/80 hover:text-[#da540c] transition">RECIPE</a>
         </li>
         <li>
-            <a href="/blogs" class="font-semibold text-white/80 hover:text-[#FFD6C0] transition">BLOGS</a>
+            <a href="/blog" class="font-semibold text-white/80 hover:text-[#da540c] transition">BLOG</a>
         </li>
         <li>
-            <a href="/contact" class="font-semibold text-white/80 hover:text-[#FFD6C0] transition">CONTACT US</a>
+            <a href="/contact" class="font-semibold text-white/80 hover:text-[#da540c] transition">CONTACT US</a>
         </li>
     </ul>
 </nav>
