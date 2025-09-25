@@ -15,6 +15,18 @@ Route::get('/dashboardadmin', function () {
     return view('pages.admin.dashboardadmin');
 });
 
+Route::get('/products', function () {
+    return view('pages.admin.productadmin');
+});
+
+Route::get('/sop', function () {
+    return view('pages.admin.sop');
+});
+
+Route::get('/blogadmin', function () {
+    return view('pages.admin.blogadmin');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
