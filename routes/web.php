@@ -8,7 +8,11 @@ Route::get('/', function () {
 });
 
 Route::get('/blog', function () {
-    return view('pages.blog');
+    return view('pages.user.blog');
+});
+
+Route::get('/dashboardadmin', function () {
+    return view('pages.admin.dashboardadmin');
 });
 
 Route::get('/dashboard', function () {
