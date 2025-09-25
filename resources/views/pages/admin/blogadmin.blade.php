@@ -17,6 +17,10 @@
         <!-- Header -->
         <h1 class="text-4xl font-bold text-gray-500 mb-8">Blog</h1>
 
+        <!-- Blog Table -->
+        <div class="mb-8">
+            <x-blogtable />
+        </div>
 
     </div>
 </body>

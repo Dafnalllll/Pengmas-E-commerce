@@ -16,7 +16,10 @@
         <!-- Header -->
         <h1 class="text-4xl font-bold text-gray-500 mb-8">Products</h1>
 
-
+        <!-- Product Table -->
+        <div class="mb-8">
+            <x-producttable />
+        </div>
     </div>
 </body>
 </html>
