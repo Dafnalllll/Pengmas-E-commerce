@@ -95,11 +95,11 @@
 
     <!-- Add Product Button -->
     <div class="flex justify-end mt-6">
-        <button class="bg-[#6B4226] hover:bg-[#5A3520] hover:scale-105 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center">
+        <a href="{{ route('admin.add.product') }}" class="bg-[#6B4226] hover:bg-[#5A3520] hover:scale-105 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
             </svg>
             Add Product
-        </button>
+        </a>
     </div>
 </div>

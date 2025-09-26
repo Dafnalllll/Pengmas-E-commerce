@@ -16,7 +16,10 @@
     <div class="flex-1 p-8">
         <!-- Header -->
         <h1 class="text-4xl font-bold text-gray-500 mb-8">SOP</h1>
-
+        <!-- SOP Table -->
+        <div class="mb-8">
+            <x-soptable />
+        </div>
     </div>
 </body>
 </html>
