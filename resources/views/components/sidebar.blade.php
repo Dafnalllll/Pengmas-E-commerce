@@ -1,15 +1,33 @@
 <!-- filepath: d:\Dafa Code\pengmase-ecommerce\resources\views\components\sidebar.blade.php -->
-<div class="h-screen w-64 bg-gray-500 flex flex-col shadow-lg">
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-btn" class="lg:hidden fixed top-4 left-4 z-50 bg-gray-500 text-white p-2 rounded-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+</button>
+
+<!-- Overlay -->
+<div id="sidebar-overlay" class="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="fixed lg:static h-screen w-64 bg-gray-500 flex flex-col shadow-lg transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out z-50">
+    <!-- Close Button (Mobile Only) -->
+    <button id="close-sidebar" class="lg:hidden absolute top-4 right-4 text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
     <!-- Logo Section -->
-    <div class="bg-gray-500 p-6 text-center ">
-        <img src="/img/ikonrasaumbi.png" alt="Rasa Umbi Logo" class="h-20 mx-auto mb-2">
+    <div class="bg-gray-500 p-4 lg:p-6 text-center">
+        <img src="/img/ikonrasaumbi.png" alt="Rasa Umbi Logo" class="h-16 lg:h-20 mx-auto mb-2">
     </div>
 
     <!-- Navigation Menu -->
-    <nav class="flex-1 py-6">
+    <nav class="flex-1 py-4 lg:py-6">
         <ul class="space-y-2 font-[Carena]">
-            <!-- Dashboard - Active -->
-             <li class="px-8">
+            <!-- Dashboard -->
+            <li class="px-6 lg:px-8">
                 <a href="/dashboardadmin" class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
@@ -20,7 +38,7 @@
             </li>
 
             <!-- Products -->
-            <li class="px-8">
+            <li class="px-6 lg:px-8">
                 <a href="/products" class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -30,7 +48,7 @@
             </li>
 
             <!-- SOP -->
-            <li class="px-8">
+            <li class="px-6 lg:px-8">
                 <a href="/sop" class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -40,7 +58,7 @@
             </li>
 
             <!-- Blogs -->
-            <li class="px-8">
+            <li class="px-6 lg:px-8">
                 <a href="/blogadmin" class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -52,7 +70,7 @@
     </nav>
 
     <!-- Logout -->
-    <div class="p-6 ">
+    <div class="p-4 lg:p-6">
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit" class="w-full flex items-center text-left py-3 px-4 text-[#F8F3E7] hover:text-red-500 font-medium font-[Carena] transition-colors">
@@ -64,3 +82,38 @@
         </form>
     </div>
 </div>
+
+<script>
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebar-overlay');
+        const closeSidebar = document.getElementById('close-sidebar');
+
+        // Open sidebar
+        mobileMenuBtn?.addEventListener('click', function() {
+            sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+        });
+
+        // Close sidebar
+        function closeSidebarFunc() {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+        }
+
+        closeSidebar?.addEventListener('click', closeSidebarFunc);
+        overlay?.addEventListener('click', closeSidebarFunc);
+
+        // Close sidebar when clicking on nav links (mobile)
+        const navLinks = sidebar.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth < 1024) {
+                    closeSidebarFunc();
+                }
+            });
+        });
+    });
+</script>

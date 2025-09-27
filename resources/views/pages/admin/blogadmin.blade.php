@@ -8,17 +8,17 @@
     <title>Blog Admin | Rasa Umbi</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-200 flex">
+<body class="bg-gray-200 flex flex-col lg:flex-row">
     <!-- Sidebar -->
     <x-sidebar />
 
     <!-- Main Content -->
-    <div class="flex-1 p-8">
+    <div class="flex-1 p-4 lg:p-8 pt-16 lg:pt-8">
         <!-- Header -->
-        <h1 class="text-4xl font-bold text-gray-500 mb-8">Blog</h1>
+        <h1 class="text-2xl lg:text-4xl font-bold text-gray-500 mb-4 lg:mb-8">Blog</h1>
 
         <!-- Blog Table -->
-        <div class="mb-8">
+        <div class="mb-4 lg:mb-8">
             <x-blogtable />
         </div>
 
