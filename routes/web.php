@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+//User Routes
 Route::get('/', function () {
     return view('welcome');
 });
@@ -11,6 +12,12 @@ Route::get('/blog', function () {
     return view('pages.user.blog');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+// Admin Routes
 Route::get('/dashboardadmin', function () {
     return view('pages.admin.dashboardadmin');
 })->name('admin.dashboard');
@@ -39,9 +46,6 @@ Route::get('/admin/add/addblog', function () {
     return view('pages.admin.add.addblog');
 })->name('admin.add.blog');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -35,15 +35,15 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold text-[#6B4226]">Products</h3>
+                        <h3 class="text-lg font-semibold text-black">Products</h3>
                     </div>
                 </div>
-                <div class="text-3xl font-bold text-[#6B4226] mb-2">3</div>
+                <div class="text-3xl font-bold text-black mb-2">3</div>
                 <p class="text-gray-600 text-sm mb-4">3 active</p>
-                <a href="/admin/products" class="text-red-600 hover:underline font-medium">Manage Products</a>
+                <a href="{{ route('admin.product') }}" class="text-red-600 hover:underline font-medium">Manage Products</a>
             </div>
 
-            <!-- Recipes Card -->
+            <!-- SOP Card -->
             <div class="bg-white p-6 rounded-lg shadow-md">
                 <div class="flex items-center mb-4">
                     <div class="bg-[#FFB347] p-3 rounded-lg mr-4">
@@ -52,12 +52,12 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold text-[#6B4226]">SOP</h3>
+                        <h3 class="text-lg font-semibold text-black">SOP</h3>
                     </div>
                 </div>
-                <div class="text-3xl font-bold text-[#6B4226] mb-2">3</div>
-                <p class="text-gray-600 text-sm mb-4">3 active</p>
-                <a href="/admin/recipes" class="text-red-600 hover:underline font-medium">Manage SOP</a>
+                <div class="text-3xl font-bold text-black mb-2">3</div>
+                <p class="text-gray-600 text-sm mb-4">3 published</p>
+                <a href="{{ route('admin.sop') }}" class="text-red-600 hover:underline font-medium">Manage SOP</a>
             </div>
 
             <!-- Blogs Card -->
@@ -69,12 +69,12 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold text-[#6B4226]">Blogs</h3>
+                        <h3 class="text-lg font-semibold text-black">Blogs</h3>
                     </div>
                 </div>
-                <div class="text-3xl font-bold text-[#6B4226] mb-2">1</div>
+                <div class="text-3xl font-bold text-black mb-2">1</div>
                 <p class="text-gray-600 text-sm mb-4">1 published</p>
-                <a href="/admin/blogs" class="text-red-600 hover:underline font-medium">Manage Blogs</a>
+                <a href="{{ route('admin.blog') }}" class="text-red-600 hover:underline font-medium">Manage Blogs</a>
             </div>
         </div>
 
@@ -83,28 +83,28 @@
             <h3 class="text-2xl font-semibold text-gray-500 mb-6">Quick Links</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <!-- Add Product -->
-                <button class="bg-[#4ECDC4] hover:bg-[#45B7B8] hover:scale-105 text-white p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center">
+                <a href="{{ route('admin.add.product') }}" class="bg-[#4ECDC4] hover:bg-[#45B7B8] hover:scale-105 text-white p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
                     Add Product
-                </button>
+                </a>
 
-                <!-- Add Recipe -->
-                <button class="bg-[#FFB347] hover:bg-[#FF9800] hover:scale-105 text-white p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center">
+                <!-- Add SOP -->
+                <a href="{{ route('admin.add.sop') }}" class="bg-[#FFB347] hover:bg-[#FF9800] hover:scale-105 text-white p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
                     Add SOP
-                </button>
+                </a>
 
                 <!-- Add Blog -->
-                <button class="bg-[#9B59B6] hover:bg-[#8E44AD] hover:scale-105 text-white p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center">
+                <a href="{{ route('admin.add.blog') }}" class="bg-[#9B59B6] hover:bg-[#8E44AD] hover:scale-105 text-white p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
                     Add Blog
-                </button>
+                </a>
             </div>
         </div>
     </div>

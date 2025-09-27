@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
     <title>Add SOP | Rasa Umbi</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#F5F5DC] flex">
+<body class="bg-gray-100 flex">
     <!-- Sidebar -->
     <x-sidebar />
 
     <!-- Main Content -->
     <div class="flex-1 p-8">
         <!-- Header -->
-        <h1 class="text-4xl font-bold text-[#6B4226] mb-8">Add SOP</h1>
+        <h1 class="text-4xl font-bold text-gray-500 mb-8">Add SOP</h1>
 
         <!-- Form -->
         <form action="#" method="POST" enctype="multipart/form-data" class="w-full">
@@ -22,14 +23,14 @@
 
             <!-- Upload File PDF -->
             <div class="mb-6 flex justify-center">
-                <div class="w-80 h-40 border-2 border-dashed border-[#A52A2A] rounded-lg bg-[#E5DDD5] flex flex-col items-center justify-center cursor-pointer hover:bg-[#D5CCC5] transition-colors">
+                <div class="w-80 h-40 border-2 border-dashed border-gray-500 rounded-lg bg-gray-100 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-300 transition-colors">
                     <input type="file" id="sop_file" name="sop_file" class="hidden" accept=".pdf">
                     <label for="sop_file" class="cursor-pointer text-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#6B4226] mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-black mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
-                        <span class="text-lg font-medium text-[#6B4226]">Upload File PDF</span>
-                        <p class="text-sm text-[#8B4513] mt-1">Only PDF files allowed</p>
+                        <span class="text-lg font-medium text-black">Upload File PDF</span>
+                        <p class="text-sm text-gray-600 mt-1">Only PDF files allowed</p>
                     </label>
                 </div>
             </div>
@@ -40,7 +41,7 @@
                     type="text"
                     name="sop_name"
                     placeholder="Nama File SOP (contoh: SOP Penjualan Produk)"
-                    class="w-full px-4 py-4 rounded-lg border-2 border-[#A52A2A] bg-[#E5DDD5] text-[#6B4226] placeholder-[#8B4513] focus:outline-none focus:border-[#8B1A1A] text-lg"
+                    class="w-full px-4 py-4 rounded-lg border-2 border-gray-500 bg-gray-100 text-black placeholder-gray-600 focus:outline-none  text-lg"
                     required
                 >
             </div>
@@ -58,7 +59,7 @@
                 </a>
                 <button
                     type="submit"
-                    class="bg-[#6B4226] hover:bg-[#5A3520] hover:scale-105 text-white px-10 py-3 rounded-lg font-semibold transition-all duration-200 text-lg"
+                    class="bg-black hover:bg-gray-400 hover:scale-105 text-white px-10 py-3 rounded-lg font-semibold transition-all duration-200 text-lg"
                 >
                     Submit
                 </button>
