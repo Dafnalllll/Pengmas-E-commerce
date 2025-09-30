@@ -42,32 +42,32 @@
                 </h4>
                 <ul class="space-y-3">
                     <li>
-                        <a href="/" class="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-home mr-2 group-hover:text-orange-400"></i>
+                        <a href="/" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-home mr-2 group-hover:text-[#A52A2A]"></i>
                             Beranda
                         </a>
                     </li>
                     <li>
-                        <a href="/about" class="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-info-circle mr-2 group-hover:text-orange-400"></i>
+                        <a href="/about" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-info-circle mr-2 group-hover:text-[#A52A2A]"></i>
                             Tentang Kami
                         </a>
                     </li>
                     <li>
-                        <a href="/products" class="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-shopping-bag mr-2 group-hover:text-orange-400"></i>
+                        <a href="/products" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-shopping-bag mr-2 group-hover:text-[#A52A2A]"></i>
                             Produk
                         </a>
                     </li>
                     <li>
-                        <a href="/blog" class="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-newspaper mr-2 group-hover:text-orange-400"></i>
+                        <a href="/blog" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-newspaper mr-2 group-hover:text-[#A52A2A]"></i>
                             Blog
                         </a>
                     </li>
                     <li>
-                        <a href="/contact" class="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-envelope mr-2 group-hover:text-orange-400"></i>
+                        <a href="/contact" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-envelope mr-2 group-hover:text-[#A52A2A]"></i>
                             Kontak
                         </a>
                     </li>
@@ -81,32 +81,32 @@
                 </h4>
                 <ul class="space-y-3">
                     <li>
-                        <a href="/products/1" class="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-cube mr-2 group-hover:text-orange-400"></i>
+                        <a href="/products/1" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-cube mr-2 group-hover:text-[#A52A2A]"></i>
                             Gula Aren Kristal
                         </a>
                     </li>
                     <li>
-                        <a href="/products/2" class="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-tint mr-2 group-hover:text-orange-400"></i>
+                        <a href="/products/2" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-tint mr-2 group-hover:text-[#A52A2A]"></i>
                             Gula Aren Cair
                         </a>
                     </li>
                     <li>
-                        <a href="/products/3" class="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-box mr-2 group-hover:text-orange-400"></i>
+                        <a href="/products/3" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-box mr-2 group-hover:text-[#A52A2A]"></i>
                             Gula Aren Stick
                         </a>
                     </li>
                     <li>
-                        <a href="/products/4" class="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-magic mr-2 group-hover:text-orange-400"></i>
+                        <a href="/products/4" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-magic mr-2 group-hover:text-[#A52A2A]"></i>
                             Gula Aren Bubuk
                         </a>
                     </li>
                     <li>
-                        <a href="/products/premium" class="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-crown mr-2 group-hover:text-orange-400"></i>
+                        <a href="/products/premium" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-crown mr-2 group-hover:text-[#A52A2A]"></i>
                             Paket Premium
                         </a>
                     </li>
@@ -120,7 +120,7 @@
                 </h4>
                 <div class="space-y-4">
                     <div class="flex items-start space-x-3">
-                        <i class="fas fa-map-marker-alt text-orange-400 mt-1"></i>
+                        <i class="fas fa-map-marker-alt text-[#A52A2A] mt-1"></i>
                         <div>
                             <p class="text-gray-300 text-sm">
                                 Jl. Raya Umbi No. 123<br>
@@ -131,21 +131,21 @@
                     </div>
 
                     <div class="flex items-center space-x-3">
-                        <i class="fas fa-phone text-orange-400"></i>
+                        <i class="fas fa-phone text-[#A52A2A]"></i>
                         <a href="tel:+6282112345678" class="text-gray-300 hover:text-white transition-colors duration-300">
                             +62 821-1234-5678
                         </a>
                     </div>
 
                     <div class="flex items-center space-x-3">
-                        <i class="fas fa-envelope text-orange-400"></i>
+                        <i class="fas fa-envelope text-[#A52A2A]"></i>
                         <a href="mailto:info@rasaumbi.com" class="text-gray-300 hover:text-white transition-colors duration-300">
                             info@rasaumbi.com
                         </a>
                     </div>
 
                     <div class="flex items-center space-x-3">
-                        <i class="fas fa-clock text-orange-400"></i>
+                        <i class="fas fa-clock text-[#A52A2A]"></i>
                         <div class="text-gray-300 text-sm">
                             <p>Sen-Jum: 08:00-17:00</p>
                             <p>Sabtu: 08:00-15:00</p>
@@ -169,7 +169,7 @@
 
     <!-- Scroll to Top Button -->
     <button onclick="scrollToTop()"
-            class="fixed bottom-8 right-8 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-50"
+            class="fixed bottom-8 right-8 bg-[#A52A2A] hover:from-[#A52A2A] hover:to-red-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-50"
             id="scrollToTopBtn">
         <i class="fas fa-arrow-up"></i>
     </button>
