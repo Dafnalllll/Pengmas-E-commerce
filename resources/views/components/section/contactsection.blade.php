@@ -10,7 +10,7 @@
 
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4 hover:scale-110 transition-all duration-300">
-                            <div class="bg-orange-500 p-3 rounded-full">
+                            <div class="bg-[#A52A2A] p-3 rounded-full">
                                 <i class="fas fa-map-marker-alt text-white text-lg"></i>
                             </div>
                             <div>
@@ -20,7 +20,7 @@
                         </div>
 
                         <div class="flex items-start space-x-4 hover:scale-110 transition-all duration-300">
-                            <div class="bg-orange-500 p-3 rounded-full">
+                            <div class="bg-[#A52A2A] p-3 rounded-full">
                                 <i class="fas fa-phone text-white text-lg"></i>
                             </div>
                             <div>
@@ -30,7 +30,7 @@
                         </div>
 
                         <div class="flex items-start space-x-4 hover:scale-110 transition-all duration-300">
-                            <div class="bg-orange-500 p-3 rounded-full">
+                            <div class="bg-[#A52A2A] p-3 rounded-full">
                                 <i class="fas fa-envelope text-white text-lg"></i>
                             </div>
                             <div>
@@ -40,7 +40,7 @@
                         </div>
 
                         <div class="flex items-start space-x-4 hover:scale-110 transition-all duration-300">
-                            <div class="bg-orange-500 p-3 rounded-full ">
+                            <div class="bg-[#A52A2A] p-3 rounded-full ">
                                 <i class="fas fa-clock text-white text-lg"></i>
                             </div>
                             <div>
@@ -125,7 +125,7 @@
                     </div>
 
                     <button type="submit"
-                            class="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                            class="w-full bg-gradient-to-r from-[#A52A2A] to-red-600 hover:from-[#A52A2A] hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                         <i class="fas fa-paper-plane mr-2"></i>
                         Kirim Pesan
                     </button>

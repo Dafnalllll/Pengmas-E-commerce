@@ -15,15 +15,15 @@
                     </p>
                     <div class="flex space-x-4">
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-orange-500" style="font-family: 'Cormorant Garamond', serif;">100+</div>
+                            <div class="text-3xl font-bold text-[#A52A2A]" style="font-family: 'Cormorant Garamond', serif;">100+</div>
                             <div class="text-gray-300 text-sm">Produk</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-orange-500" style="font-family: 'Cormorant Garamond', serif;">5000+</div>
+                            <div class="text-3xl font-bold text-[#A52A2A]" style="font-family: 'Cormorant Garamond', serif;">5000+</div>
                             <div class="text-gray-300 text-sm">Pelanggan</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-orange-500" style="font-family: 'Cormorant Garamond', serif;">50+</div>
+                            <div class="text-3xl font-bold text-[#A52A2A]" style="font-family: 'Cormorant Garamond', serif;">50+</div>
                             <div class="text-gray-300 text-sm">Kota</div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                     </h3>
                     <div class="space-y-4">
                         <div class="flex items-start space-x-4">
-                            <div class="bg-orange-500 p-2 rounded-full flex-shrink-0">
+                            <div class="bg-[#A52A2A] p-2 rounded-full flex-shrink-0">
                                 <i class="fas fa-leaf text-white"></i>
                             </div>
                             <div>
@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="flex items-start space-x-4">
-                            <div class="bg-orange-500 p-2 rounded-full flex-shrink-0">
+                            <div class="bg-[#A52A2A] p-2 rounded-full flex-shrink-0">
                                 <i class="fas fa-award text-white"></i>
                             </div>
                             <div>
@@ -58,7 +58,7 @@
                         </div>
 
                         <div class="flex items-start space-x-4">
-                            <div class="bg-orange-500 p-2 rounded-full flex-shrink-0">
+                            <div class="bg-[#A52A2A] p-2 rounded-full flex-shrink-0">
                                 <i class="fas fa-shipping-fast text-white"></i>
                             </div>
                             <div>
@@ -68,7 +68,7 @@
                         </div>
 
                         <div class="flex items-start space-x-4">
-                            <div class="bg-orange-500 p-2 rounded-full flex-shrink-0">
+                            <div class="bg-[#A52A2A] p-2 rounded-full flex-shrink-0">
                                 <i class="fas fa-headset text-white"></i>
                             </div>
                             <div>
