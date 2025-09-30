@@ -72,7 +72,7 @@ $products = [
 
         <!-- CTA Button -->
         <div class="mt-12" data-aos="fade-up" data-aos-delay="800">
-            <a href="/products" class="inline-block bg-gradient-to-r from-[#A52A2A] to-red-600 hover:from-[#A52A2A] hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <a href="/product" class="inline-block bg-gradient-to-r from-[#A52A2A] to-red-600 hover:from-[#A52A2A] hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
                 <i class="fas fa-store mr-2"></i>
                 Lihat Semua Produk
             </a>

@@ -20,7 +20,7 @@
 
                 <!-- Social Media -->
                 <div class="flex space-x-4">
-                    <a href="#" class="bg-white/10 hover:bg-orange-500 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                    <a href="#" class="bg-white/10 hover:bg-blue-500 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
                         <i class="fab fa-facebook-f text-white text-lg"></i>
                     </a>
                     <a href="#" class="bg-white/10 hover:bg-pink-600 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
