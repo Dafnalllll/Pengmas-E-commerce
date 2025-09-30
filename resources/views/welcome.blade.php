@@ -50,6 +50,9 @@
 
             <!-- About Section -->
             <x-section.about />
+
+            <!-- Footer -->
+            <x-footer />
         </div>
     </body>
 </html>
