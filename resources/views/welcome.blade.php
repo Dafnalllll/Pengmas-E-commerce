@@ -45,8 +45,11 @@
                     </span>
                 </div>
             </div>
-            <!-- Produk Section -->
-            <x-produksection />
+             <!-- Produk Section -->
+            <x-section.produksection />
+
+            <!-- About Section -->
+            <x-section.about />
         </div>
     </body>
 </html>

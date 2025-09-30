@@ -16,6 +16,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/contact', function () {
+    return view('pages.user.contact');
+})->name('contact');
+
 
 // Admin Routes
 Route::get('/dashboardadmin', function () {

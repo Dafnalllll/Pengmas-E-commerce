@@ -4,7 +4,7 @@
 </head>
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<nav 
+<nav
     class="fixed top-0 left-0 w-full z-50 bg-[#A52A2A] bg-opacity-90 flex items-center justify-between px-20 py-4 shadow-md"
     data-aos="fade-down"
     data-aos-duration="800"
@@ -12,7 +12,7 @@
     <!-- Logo, Judul, Tagline -->
     <div class="flex items-center space-x-4">
         <img src="/img/ikonrasaumbi.png" alt="Rasa Umbi Logo" class="h-12 w-auto drop-shadow-lg">
-        
+
     </div>
     <!-- Menu -->
     <ul class="flex space-x-8">
@@ -29,7 +29,7 @@
             <a href="/blog" class="font-semibold text-white/80 hover:text-[#da540c] transition">BLOG</a>
         </li>
         <li>
-            <a href="/contact" class="font-semibold text-white/80 hover:text-[#da540c] transition">CONTACT US</a>
+            <a href="/contact" class="font-semibold text-white/80 hover:text-[#da540c] transition">CONTACT</a>
         </li>
     </ul>
 </nav>
