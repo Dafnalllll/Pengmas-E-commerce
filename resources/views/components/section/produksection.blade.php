@@ -42,7 +42,9 @@ $products = [
                 PRODUK KAMI
             </h2>
         </div>
-        <p class="text-xl text-gray-200 mb-12 font-medium">
+        <p class="text-xl text-gray-200 mb-12 font-medium"
+        data-aos="zoom-in"
+        data-aos-duration="800">
             Menghadirkan gula aren murni dari alam, dengan proses tradisional yang menjaga cita rasa dan kualitas terbaik!
         </p>
 
