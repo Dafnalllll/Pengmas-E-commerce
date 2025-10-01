@@ -51,8 +51,14 @@
         <!-- Contact Section -->
         <x-section.contactsection />
 
-       <!-- Map Section -->
+        <!-- FAQ Section -->
+        <x-section.faqsection />
+
+        <!-- Map Section -->
         <x-section.map />
+
+        <!-- Footer -->
+        <x-footer />
     </main>
 
 </body>
