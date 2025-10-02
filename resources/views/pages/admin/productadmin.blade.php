@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Product Admin | Rasa Umbi</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-200 flex">
     <!-- Sidebar -->
     <x-sidebar />
@@ -18,8 +20,9 @@
 
         <!-- Product Table -->
         <div class="mb-4 lg:mb-8">
-            <x-producttable />
+            <x-producttable :products="$products" />
         </div>
     </div>
 </body>
+
 </html>

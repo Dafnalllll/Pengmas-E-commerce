@@ -40,7 +40,7 @@
                 </div>
                 <div class="text-2xl lg:text-3xl font-bold text-black mb-2">3</div>
                 <p class="text-gray-600 text-xs lg:text-sm mb-2 lg:mb-4">3 active</p>
-                <a href="{{ route('admin.product') }}" class="text-red-600 hover:underline font-medium text-sm lg:text-base">Manage Products</a>
+                <a href="{{ route('admin.products') }}" class="text-red-600 hover:underline font-medium text-sm lg:text-base">Manage Products</a>
             </div>
 
             <!-- SOP Card -->
@@ -83,7 +83,7 @@
             <h3 class="text-xl lg:text-2xl font-semibold text-gray-500 mb-4 lg:mb-6">Quick Links</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
                 <!-- Add Product -->
-                <a href="{{ route('admin.add.product') }}" class="bg-[#4ECDC4] hover:bg-[#45B7B8] hover:scale-105 text-white p-3 lg:p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center text-sm lg:text-base">
+                <a href="{{ route('admin.products.create') }}" class="bg-[#4ECDC4] hover:bg-[#45B7B8] hover:scale-105 text-white p-3 lg:p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center text-sm lg:text-base">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:h-5 lg:w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
