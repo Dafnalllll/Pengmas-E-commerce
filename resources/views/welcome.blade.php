@@ -49,8 +49,8 @@
              <!-- About Section -->
             <x-section.about />
 
-             <!-- Produk Section -->
-            <x-section.produksection />
+             <!-- Profil Section -->
+            <x-section.profilsection />
 
             <!-- Footer -->
             <x-footer />

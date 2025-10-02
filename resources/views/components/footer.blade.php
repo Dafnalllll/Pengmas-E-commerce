@@ -167,12 +167,15 @@
         </div>
     </div>
 
-    <!-- Scroll to Top Button -->
-    <button onclick="scrollToTop()"
-            class="fixed bottom-8 right-8 bg-[#A52A2A] hover:from-[#A52A2A] hover:to-red-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-50"
-            id="scrollToTopBtn">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Scroll to Top Button Wrapper (tanpa AOS) -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <!-- Scroll to Top Button (hover membesar) -->
+        <button onclick="scrollToTop()"
+                class="bg-[#A52A2A] hover:from-[#A52A2A] hover:to-red-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+                id="scrollToTopBtn">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
 </footer>
 
 <script>
@@ -184,23 +187,12 @@ function scrollToTop() {
     });
 }
 
-// Show/Hide Scroll to Top Button
-window.addEventListener('scroll', function() {
-    const scrollBtn = document.getElementById('scrollToTopBtn');
-    if (window.pageYOffset > 300) {
-        scrollBtn.style.opacity = '1';
-        scrollBtn.style.pointerEvents = 'auto';
-    } else {
-        scrollBtn.style.opacity = '0';
-        scrollBtn.style.pointerEvents = 'none';
-    }
-});
 
-// Initialize scroll button as hidden
+// DIBUAT SELALU MUNCUL
 document.addEventListener('DOMContentLoaded', function() {
     const scrollBtn = document.getElementById('scrollToTopBtn');
-    scrollBtn.style.opacity = '0';
-    scrollBtn.style.pointerEvents = 'none';
+    scrollBtn.style.opacity = '1';
+    scrollBtn.style.pointerEvents = 'auto';
     scrollBtn.style.transition = 'opacity 0.3s ease';
 });
 </script>
