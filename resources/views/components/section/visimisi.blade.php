@@ -2,7 +2,7 @@
     <div class="max-w-4xl mx-auto">
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: 'Cormorant Garamond', serif;">
-                Visi & Misi Rasa Umbi
+                Visi & Misi 
             </h2>
             <p class="text-gray-300 text-lg max-w-2xl mx-auto">
                 Landasan dan tujuan utama kami dalam menghadirkan produk-produk berkualitas dari umbi-umbian Nusantara.

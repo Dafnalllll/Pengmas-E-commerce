@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rasa Umbi | Blog</title>
+    <title>Kampung Syurga | Blog</title>
     <!-- Tailwind CSS (CDN for demo) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- AOS Animation CSS -->

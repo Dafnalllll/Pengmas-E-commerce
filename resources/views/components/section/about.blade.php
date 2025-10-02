@@ -5,7 +5,7 @@
             <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-xl hover:scale-110 transition-all duration-500 cursor-pointer">
                     <h2 class="text-3xl font-bold text-white mb-6" style="font-family: 'Cormorant Garamond', serif;">
-                        Tentang Rasa Umbi
+                        Tentang Kampung Syurga
                     </h2>
                     <p class="text-gray-200 text-lg leading-relaxed mb-6">
                         Rasa Umbi adalah brand yang menghadirkan kekayaan rasa asli Indonesia melalui produk-produk berkualitas tinggi yang terbuat dari umbi-umbian nusantara.
