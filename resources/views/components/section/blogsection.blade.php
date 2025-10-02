@@ -8,6 +8,7 @@ $blogs = [
         'date' => '15 September 2025',
         'category' => 'Kesehatan',
         'image' => 'img/ikonrasaumbi.png',
+        
         'delay' => 200
     ],
     [

@@ -52,6 +52,9 @@
              <!-- Profil Section -->
             <x-section.profilsection />
 
+                <!-- Visi Misi Section -->
+            <x-section.visimisi />
+
             <!-- Footer -->
             <x-footer />
         </div>
