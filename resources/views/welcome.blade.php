@@ -36,7 +36,7 @@
                     <span class="text-6xl font-bold text-[#E0E0E0]" style="font-family: 'Cormorant Garamond', serif;"
                     data-aos="fade-up"
                     data-aos-delay="500">
-                        Rasa Umbi
+                        Kampung Syurga
                     </span>
                     <span class="text-4xl text-white font-light tracking-wide mt-1" style="font-family: 'Great Vibes', cursive;"
                     data-aos="fade-down"

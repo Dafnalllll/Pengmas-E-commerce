@@ -35,7 +35,7 @@
                             </div>
                             <div>
                                 <h3 class="text-white font-semibold text-lg mb-1">Email</h3>
-                                <p class="text-gray-200">info@rasaumbi.com</p>
+                                <p class="text-gray-200">Kampung Syurga@gmail.com</p>
                             </div>
                         </div>
 

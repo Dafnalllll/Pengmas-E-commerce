@@ -37,7 +37,7 @@
                     style="font-family: 'Cormorant Garamond', serif;"
                     data-aos="fade-up"
                     data-aos-delay="500">
-                    Rasa Umbi
+                    Kampung Syurga
                 </h1>
                 <p class="text-2xl md:text-4xl text-white font-light tracking-wide"
                    style="font-family: 'Great Vibes', cursive;"
