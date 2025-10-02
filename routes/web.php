@@ -102,6 +102,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/blog-detail', function () {
+    return view('components.blogdetail');
+});
+
 Route::fallback(function () {
     return view('components.notfound');
 });

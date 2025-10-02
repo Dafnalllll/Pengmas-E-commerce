@@ -8,7 +8,7 @@ $blogs = [
         'date' => '15 September 2025',
         'category' => 'Kesehatan',
         'image' => 'img/ikonrasaumbi.png',
-        
+
         'delay' => 200
     ],
     [
@@ -92,10 +92,8 @@ $blogs = [
 
                             <!-- Read More Button -->
                             <div class="pt-4 border-t border-white/10">
-                                <a href="/blog/{{ $blog['id'] }}"
-                                   class="inline-flex items-center text-[#A52A2A] hover:text-[#A52A2A] font-semibold text-sm transition-colors duration-300">
-                                    <span>Baca Selengkapnya</span>
-                                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                <a href="{{ url('/blog-detail') }}" class="inline-block px-4 py-2 bg-[#8B5C2D] text-white rounded hover:bg-[#A67C52] transition">
+                                    Baca Selengkapnya
                                 </a>
                             </div>
                         </div>
