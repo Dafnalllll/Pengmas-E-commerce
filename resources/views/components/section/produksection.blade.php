@@ -51,7 +51,7 @@ $products = [
         <div class="flex flex-col md:flex-row items-center justify-center gap-12">
             @foreach($products as $product)
                 <div class="flex flex-col items-center" data-aos="fade-up" data-aos-delay="{{ $product['delay'] }}">
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-4 border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer hover:scale-105">
                         <img src="{{ asset($product['image']) }}"
                              alt="{{ $product['alt'] }}"
                              class="h-20 w-auto object-contain drop-shadow-lg">
@@ -63,7 +63,7 @@ $products = [
                         {{ $product['description'] }}
                     </p>
                     <div class="mt-3">
-                        <span class="text-orange-400 font-bold">Rp {{ number_format($product['price'], 0, ',', '.') }}</span>
+                        <span class="text-[#A52A2A] font-bold">Rp {{ number_format($product['price'], 0, ',', '.') }}</span>
                         <span class="text-gray-400 text-sm">/{{ $product['unit'] }}</span>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ $products = [
 
         <!-- CTA Button -->
         <div class="mt-12" data-aos="fade-up" data-aos-delay="800">
-            <a href="/products" class="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <a href="/product" class="inline-block bg-gradient-to-r from-[#A52A2A] to-red-600 hover:from-[#A52A2A] hover:to-red-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
                 <i class="fas fa-store mr-2"></i>
                 Lihat Semua Produk
             </a>

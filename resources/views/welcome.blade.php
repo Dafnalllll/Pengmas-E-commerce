@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
-        <title>Rasa Umbi</title>
+        <title>Kampung Syurga</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -36,7 +36,7 @@
                     <span class="text-6xl font-bold text-[#E0E0E0]" style="font-family: 'Cormorant Garamond', serif;"
                     data-aos="fade-up"
                     data-aos-delay="500">
-                        Rasa Umbi
+                        Kampung Syurga
                     </span>
                     <span class="text-4xl text-white font-light tracking-wide mt-1" style="font-family: 'Great Vibes', cursive;"
                     data-aos="fade-down"
@@ -45,11 +45,18 @@
                     </span>
                 </div>
             </div>
-             <!-- Produk Section -->
-            <x-section.produksection />
 
-            <!-- About Section -->
+             <!-- About Section -->
             <x-section.about />
+
+             <!-- Profil Section -->
+            <x-section.profilsection />
+
+                <!-- Visi Misi Section -->
+            <x-section.visimisi />
+
+            <!-- Footer -->
+            <x-footer />
         </div>
     </body>
 </html>

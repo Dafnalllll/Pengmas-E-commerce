@@ -1,13 +1,13 @@
 @section('title', 'Rasa Umbi || Login')
 @push('head')
-    <title>Login | Rasa Umbi</title>
+    <title>Login | Kampung Syurga</title>
     <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 @endpush
 
 <x-guest-layout>
     <div class="fixed inset-0 min-h-screen w-full flex items-center justify-center bg-[#F8F3E7]">
-        <div 
+        <div
             class="w-full max-w-md mx-auto bg-[#E0E0E0] rounded-xl shadow-none p-8 flex flex-col items-center"
             data-aos="zoom-in"
             data-aos-duration="900"
@@ -15,7 +15,7 @@
             <!-- Logo -->
             <img src="/img/ikonrasaumbi.png" alt="Rasa Umbi Logo" class="h-16 mb-2" data-aos="fade-down" data-aos-delay="200">
             <h2 class="text-2xl font-bold text-[#1A120B] mb-6" data-aos="fade-up" data-aos-delay="400">Login</h2>
-            
+
             <!-- Session Status -->
             <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -66,9 +66,9 @@
                         </a>
                     @endif
 
-                    <x-primary-button 
-                        class="ml-3 px-6 py-2 rounded-xl font-bold bg-[#A52A2A] hover:bg-[#A52A2A] focus:bg-[#A52A2A] active:bg-[#A52A2A] text-white 
-                               border-2  active:border-[#A52A2A] hover:border-[#A52A2A] 
+                    <x-primary-button
+                        class="ml-3 px-6 py-2 rounded-xl font-bold bg-[#A52A2A] hover:bg-[#A52A2A] focus:bg-[#A52A2A] active:bg-[#A52A2A] text-white
+                               border-2  active:border-[#A52A2A] hover:border-[#A52A2A]
                                focus:outline-none focus:ring-0 focus:ring-transparent"
                     >
                         {{ __('Log in') }}

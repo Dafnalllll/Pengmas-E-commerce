@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rasa Umbi | Contact</title>
+    <title>Kampung Syurga | Contact</title>
     <!-- Tailwind CSS (CDN for demo) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- AOS Animation CSS -->
@@ -37,7 +37,7 @@
                     style="font-family: 'Cormorant Garamond', serif;"
                     data-aos="fade-up"
                     data-aos-delay="500">
-                    Rasa Umbi
+                    Kampung Syurga
                 </h1>
                 <p class="text-2xl md:text-4xl text-white font-light tracking-wide"
                    style="font-family: 'Great Vibes', cursive;"
@@ -51,8 +51,14 @@
         <!-- Contact Section -->
         <x-section.contactsection />
 
-       <!-- Map Section -->
+        <!-- FAQ Section -->
+        <x-section.faqsection />
+
+        <!-- Map Section -->
         <x-section.map />
+
+        <!-- Footer -->
+        <x-footer />
     </main>
 
 </body>

@@ -10,7 +10,7 @@
 
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4 hover:scale-110 transition-all duration-300">
-                            <div class="bg-orange-500 p-3 rounded-full">
+                            <div class="bg-[#A52A2A] p-3 rounded-full">
                                 <i class="fas fa-map-marker-alt text-white text-lg"></i>
                             </div>
                             <div>
@@ -20,7 +20,7 @@
                         </div>
 
                         <div class="flex items-start space-x-4 hover:scale-110 transition-all duration-300">
-                            <div class="bg-orange-500 p-3 rounded-full">
+                            <div class="bg-[#A52A2A] p-3 rounded-full">
                                 <i class="fas fa-phone text-white text-lg"></i>
                             </div>
                             <div>
@@ -30,17 +30,17 @@
                         </div>
 
                         <div class="flex items-start space-x-4 hover:scale-110 transition-all duration-300">
-                            <div class="bg-orange-500 p-3 rounded-full">
+                            <div class="bg-[#A52A2A] p-3 rounded-full">
                                 <i class="fas fa-envelope text-white text-lg"></i>
                             </div>
                             <div>
                                 <h3 class="text-white font-semibold text-lg mb-1">Email</h3>
-                                <p class="text-gray-200">info@rasaumbi.com</p>
+                                <p class="text-gray-200">Kampung Syurga@gmail.com</p>
                             </div>
                         </div>
 
                         <div class="flex items-start space-x-4 hover:scale-110 transition-all duration-300">
-                            <div class="bg-orange-500 p-3 rounded-full ">
+                            <div class="bg-[#A52A2A] p-3 rounded-full ">
                                 <i class="fas fa-clock text-white text-lg"></i>
                             </div>
                             <div>
@@ -70,66 +70,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20"
-                 data-aos="fade-left" data-aos-delay="600">
-                <h2 class="text-3xl font-bold text-white mb-6" style="font-family: 'Cormorant Garamond', serif;">
-                    Kirim Pesan
-                </h2>
-
-                <form action="#" method="POST" class="space-y-6">
-                    @csrf
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-white font-medium mb-2">Nama Lengkap</label>
-                            <input type="text" id="name" name="name" required
-                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
-                                   placeholder="Masukkan nama lengkap">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-white font-medium mb-2">Email</label>
-                            <input type="email" id="email" name="email" required
-                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
-                                   placeholder="nama@email.com">
-                        </div>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="phone" class="block text-white font-medium mb-2">Nomor Telepon</label>
-                            <input type="tel" id="phone" name="phone"
-                                   class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
-                                   placeholder="+62 812-3456-7890">
-                        </div>
-                        <div>
-                            <label for="subject" class="block text-white font-medium mb-2">Subjek</label>
-                            <select id="subject" name="subject" required
-                                    class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20">
-                                <option value="" class="text-gray-800">Pilih subjek</option>
-                                <option value="partnership" class="text-gray-800">Kemitraan</option>
-                                <option value="wholesale" class="text-gray-800">Pembelian Grosir</option>
-                                <option value="complaint" class="text-gray-800">Keluhan</option>
-                                <option value="suggestion" class="text-gray-800">Saran</option>
-                                <option value="other" class="text-gray-800">Lainnya</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label for="message" class="block text-white font-medium mb-2">Pesan</label>
-                        <textarea id="message" name="message" rows="6" required
-                                  class="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 resize-none"
-                                  placeholder="Tulis pesan Anda di sini..."></textarea>
-                    </div>
-
-                    <button type="submit"
-                            class="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                        <i class="fas fa-paper-plane mr-2"></i>
-                        Kirim Pesan
-                    </button>
-                </form>
             </div>
         </div>
     </div>

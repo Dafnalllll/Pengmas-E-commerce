@@ -19,6 +19,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/product', function () {
+    return view('pages.user.product');
+})->name('product');
+
 Route::get('/contact', function () {
     return view('pages.user.contact');
 })->name('contact');
@@ -30,9 +34,13 @@ Route::get('/contact', function () {
 //     return view('pages.admin.dashboardadmin');
 // })->name('admin.dashboard');
 
-// Route::get('/products', function () {
-//     return view('pages.admin.productadmin');
-// })->name('admin.product');
+
+
+
+Route::get('/productmanage', function () {
+    return view('pages.admin.productadmin');
+})->name('admin.product');
+
 
 // Route::get('/admin/add/addproduct', function () {
 //     return view('pages.admin.add.addproduct');
@@ -50,12 +58,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/products', [App\Http\Controllers\Admin\ProductController::class, 'index'])
         ->name('products');
     Route::get('/products/create', [App\Http\Controllers\Admin\ProductController::class, 'create'])
-        ->name('products.create'); 
+        ->name('products.create');
     Route::post('/products/store', [App\Http\Controllers\Admin\ProductController::class, 'store'])
         ->name('products.store');
-    
 
-    
+
+
 
     // 3. Tambah Produk (Form):
     // CATATAN: Route untuk form tambah produk sudah ada di resource route di atas:

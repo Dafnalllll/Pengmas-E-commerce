@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
-    <title>Blog Admin | Rasa Umbi</title>
+    <title>Blog Admin | Kampung Syurga</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-200 flex flex-col lg:flex-row">

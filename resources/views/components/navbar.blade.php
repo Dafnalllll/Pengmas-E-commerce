@@ -23,9 +23,6 @@
             <a href="/product" class="font-semibold text-white/80 hover:text-[#da540c] transition">PRODUCT</a>
         </li>
         <li>
-            <a href="/recipe" class="font-semibold text-white/80 hover:text-[#da540c] transition">RECIPE</a>
-        </li>
-        <li>
             <a href="/blog" class="font-semibold text-white/80 hover:text-[#da540c] transition">BLOG</a>
         </li>
         <li>
