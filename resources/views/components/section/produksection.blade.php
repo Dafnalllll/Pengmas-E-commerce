@@ -75,7 +75,7 @@ $products = [
                     </a>
                 </div>
             @endforeach
-        </div>
+        </div>x
 
         <!-- CTA Button -->
         <div class="mt-12" data-aos="fade-up" data-aos-delay="800">
