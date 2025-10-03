@@ -18,7 +18,13 @@ Route::get('/blog', function () {
     return view('pages.user.blog');
 });
 
+<<<<<<< HEAD
 Route::get('/blog', [FrontendBlogController::class, 'index'])->name('product');
+=======
+Route::get('/sopp', function () {
+    return view('pages.user.sop');
+})->name('sop');
+>>>>>>> 8852769 (blogdetail2)
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -119,6 +125,10 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/blog-detail', function () {
     return view('components.blogdetail');
+});
+
+Route::get('/sop-detail', function () {
+    return view('components.sopdetail');
 });
 
 Route::fallback(function () {
