@@ -51,9 +51,6 @@
         <!-- Contact Section -->
         <x-section.contactsection />
 
-        <!-- FAQ Section -->
-        <x-section.faqsection />
-
         <!-- Map Section -->
         <x-section.map />
 

@@ -11,7 +11,7 @@
                          alt="Rasa Umbi Logo"
                          class="h-12 w-auto object-contain drop-shadow-lg">
                     <h3 class="text-2xl font-bold text-white" style="font-family: 'Cormorant Garamond', serif;">
-                        Rasa Umbi
+                        Kampung Syurga
                     </h3>
                 </div>
                 <p class="text-gray-300 text-sm leading-relaxed">
@@ -36,7 +36,7 @@
             </div>
 
             <!-- Quick Links -->
-            <div class="space-y-6" data-aos="fade-right" data-aos-delay="400">
+            <div class="space-y-6 ml-[8rem]" data-aos="fade-right" data-aos-delay="400">
                 <h4 class="text-xl font-bold text-white" style="font-family: 'Cormorant Garamond', serif;">
                     Quick Links
                 </h4>
@@ -74,82 +74,35 @@
                 </ul>
             </div>
 
-            <!-- Products -->
-            <div class="space-y-6" data-aos="fade-left" data-aos-delay="600">
-                <h4 class="text-xl font-bold text-white" style="font-family: 'Cormorant Garamond', serif;">
-                    Produk Unggulan
-                </h4>
-                <ul class="space-y-3">
-                    <li>
-                        <a href="/products/1" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-cube mr-2 group-hover:text-[#A52A2A]"></i>
-                            Gula Aren Kristal
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/products/2" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-tint mr-2 group-hover:text-[#A52A2A]"></i>
-                            Gula Aren Cair
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/products/3" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-box mr-2 group-hover:text-[#A52A2A]"></i>
-                            Gula Aren Stick
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/products/4" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-magic mr-2 group-hover:text-[#A52A2A]"></i>
-                            Gula Aren Bubuk
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/products/premium" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
-                            <i class="fas fa-crown mr-2 group-hover:text-[#A52A2A]"></i>
-                            Paket Premium
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
             <!-- Contact Info -->
-            <div class="space-y-6" data-aos="fade-left" data-aos-delay="800">
+            <div class="space-y-6 ml-[12rem] lg:col-span-2" data-aos="fade-left" data-aos-delay="800">
                 <h4 class="text-xl font-bold text-white" style="font-family: 'Cormorant Garamond', serif;">
                     Hubungi Kami
                 </h4>
                 <div class="space-y-4">
-                    <div class="flex items-start space-x-3">
-                        <i class="fas fa-map-marker-alt text-[#A52A2A] mt-1"></i>
-                        <div>
-                            <p class="text-gray-300 text-sm">
-                                Jl. Raya Umbi No. 123<br>
-                                Jakarta Selatan, Indonesia<br>
-                                12345
-                            </p>
-                        </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-map-marker-alt text-[#A52A2A]"></i>
+                        <span class="text-gray-300 text-sm">
+                            Jl. Raya Umbi No. 123, Jakarta Selatan, Indonesia 12345
+                        </span>
                     </div>
-
                     <div class="flex items-center space-x-3">
                         <i class="fas fa-phone text-[#A52A2A]"></i>
                         <a href="tel:+6282112345678" class="text-gray-300 hover:text-white transition-colors duration-300">
                             +62 821-1234-5678
                         </a>
                     </div>
-
                     <div class="flex items-center space-x-3">
                         <i class="fas fa-envelope text-[#A52A2A]"></i>
                         <a href="mailto:info@rasaumbi.com" class="text-gray-300 hover:text-white transition-colors duration-300">
                             info@rasaumbi.com
                         </a>
                     </div>
-
                     <div class="flex items-center space-x-3">
                         <i class="fas fa-clock text-[#A52A2A]"></i>
-                        <div class="text-gray-300 text-sm">
-                            <p>Sen-Jum: 08:00-17:00</p>
-                            <p>Sabtu: 08:00-15:00</p>
-                        </div>
+                        <span class="text-gray-300 text-sm">
+                            Sen-Jum: 08:00-17:00, Sabtu: 08:00-15:00
+                        </span>
                     </div>
                 </div>
             </div>
