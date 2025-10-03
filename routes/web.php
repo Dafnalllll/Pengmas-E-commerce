@@ -18,13 +18,7 @@ Route::get('/blog', function () {
     return view('pages.user.blog');
 });
 
-<<<<<<< HEAD
 Route::get('/blog', [FrontendBlogController::class, 'index'])->name('product');
-=======
-Route::get('/sopp', function () {
-    return view('pages.user.sop');
-})->name('sop');
->>>>>>> 8852769 (blogdetail2)
 
 Route::get('/dashboard', function () {
     return view('dashboard');
