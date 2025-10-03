@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Frontend\ProductController as FrontendProductController;
+use App\Http\Controllers\Admin\BlogController as AdminBlogController;
+use App\Http\Controllers\Frontend\BlogController as FrontendBlogController;
+
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -15,13 +18,17 @@ Route::get('/blog', function () {
     return view('pages.user.blog');
 });
 
+Route::get('/blog', [FrontendBlogController::class, 'index'])->name('product');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/product', function () {
-    return view('pages.user.product');
-})->name('product');
+// Produk
+// Route::get('/product', function () {
+//     return view('pages.user.product');
+// })->name('product');
+Route::get('/product', [FrontendProductController::class, 'index'])->name('blogs');
 
 Route::get('/contact', function () {
     return view('pages.user.contact');
@@ -55,28 +62,36 @@ Route::prefix('admin')->name('admin.')->group(function () {
         return view('pages.admin.dashboardadmin');
     })->name('dashboard'); // Nama rute jadi 'admin.dashboard'
 
-    Route::get('/products', [App\Http\Controllers\Admin\ProductController::class, 'index'])
+    // Route Produk
+    Route::get('/products', [AdminProductController::class, 'index'])
         ->name('products');
-    Route::get('/products/create', [App\Http\Controllers\Admin\ProductController::class, 'create'])
+    Route::get('/products/create', [AdminProductController::class, 'create'])
         ->name('products.create');
-    Route::post('/products/store', [App\Http\Controllers\Admin\ProductController::class, 'store'])
+    Route::post('/products/store', [AdminProductController::class, 'store'])
         ->name('products.store');
+    Route::get('admin/products/{id}/edit', [AdminProductController::class, 'edit'])
+        ->name('products.edit');
+    Route::put('admin/products/{id}', [AdminProductController::class, 'update'])
+        ->name('products.update');
+    Route::delete('admin/products/{id}', [AdminProductController::class, 'destroy'])
+        ->name('products.destroy');
 
-
-
-
-    // 3. Tambah Produk (Form):
-    // CATATAN: Route untuk form tambah produk sudah ada di resource route di atas:
-    // URI: /admin/products/create | Nama: admin.products.create
-    // Oleh karena itu, route lama Anda untuk form tambah produk tidak diperlukan lagi
-    // dan jika dipertahankan akan menyebabkan error atau kebingungan.
-
-    // Route Lama Anda yang akan dihapus:
-    /*
-    Route::get('/admin/add/addproduct', function () {
-        return view('pages.admin.add.addproduct');
-    })->name('admin.add.product');
-    */
+    // Route Blog
+    Route::get('/blogs', [AdminBlogController::class, 'index'])
+    ->name('blogs');
+    // Route::get('/add/addblog', function () {
+    //     return view('pages.admin.add.addblog');
+    // })->name('add.blogs');
+    Route::get('/blogs/create', [AdminBlogController::class, 'create'])
+        ->name('blogs.create');
+    Route::post('/blogs/store', [AdminBlogController::class, 'store'])
+        ->name('blogs.store');
+    Route::get('/blogs/{blog}/edit', [AdminBlogController::class, 'edit'])
+        ->name('blogs.edit');
+    Route::put('/blogs/{blog}', [AdminBlogController::class, 'update'])
+        ->name('blogs.update');
+    Route::delete('/blogs/{blog}', [AdminBlogController::class, 'destroy'])
+        ->name('blogs.destroy');
 });
 
 Route::get('/sop', function () {
@@ -87,13 +102,13 @@ Route::get('/admin/add/addsop', function () {
     return view('pages.admin.add.addsop');
 })->name('admin.add.sop');
 
-Route::get('/blogadmin', function () {
-    return view('pages.admin.blogadmin');
-})->name('admin.blog');
+// Route::get('/blogadmin', function () {
+//     return view('pages.admin.blogadmin');
+// })->name('admin.blog');
 
-Route::get('/admin/add/addblog', function () {
-    return view('pages.admin.add.addblog');
-})->name('admin.add.blog');
+// Route::get('/admin/add/addblog', function () {
+//     return view('pages.admin.add.addblog');
+// })->name('admin.add.blog');
 
 
 Route::middleware('auth')->group(function () {

@@ -1,4 +1,4 @@
-@php
+{{-- @php
 $blogs = [
     [
         'id' => 1,
@@ -32,7 +32,8 @@ $blogs = [
         'delay' => 600
     ]
 ];
-@endphp
+@endphp --}}
+@props(['blogs'])
 
 <section class="py-20 px-4">
     <div class="max-w-6xl mx-auto">
@@ -49,18 +50,18 @@ $blogs = [
         <!-- Blog Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             @foreach($blogs as $blog)
-                <div data-aos="fade-up" data-aos-delay="{{ $blog['delay'] }}">
+                <div data-aos="fade-up" data-aos-delay="{{ 200 + $loop->index * 200 }}">
                     <article class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl hover:bg-white/15 hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                         <!-- Image Section -->
                         <div class="relative overflow-hidden bg-gradient-to-br from-orange-500/20 to-red-600/20 p-8 cursor-pointer">
-                            <img src="{{ asset($blog['image']) }}"
-                                alt="{{ $blog['title'] }}"
+                            <img src="{{ asset('storage/' . $blog->image) }}"
+                                alt="foto_blog'"
                                 class="h-24 w-auto object-contain mx-auto drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
 
                             <!-- Category Badge -->
                             <div class="absolute top-4 left-4">
                                 <span class="bg-[#A52A2A] text-white text-xs font-semibold px-3 py-1 rounded-full">
-                                    {{ $blog['category'] }}
+                                    {{ $blog->category }}
                                 </span>
                             </div>
                         </div>
@@ -70,23 +71,23 @@ $blogs = [
                             <!-- Title -->
                             <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#A52A2A] transition-colors duration-300"
                                 style="font-family: 'Cormorant Garamond', serif;">
-                                {{ $blog['title'] }}
+                                {{ $blog->judul_blog }}
                             </h3>
 
                             <!-- Excerpt -->
                             <p class="text-gray-300 text-sm mb-4 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                                {{ $blog['excerpt'] }}
+                                {{ $blog->excerpt }}
                             </p>
 
                             <!-- Meta Info -->
                             <div class="flex items-center justify-between text-xs text-gray-400 mb-4">
                                 <div class="flex items-center space-x-1">
                                     <i class="fas fa-user"></i>
-                                    <span>{{ $blog['author'] }}</span>
+                                    <span>{{ $blog->author }}</span>
                                 </div>
                                 <div class="flex items-center space-x-1">
                                     <i class="fas fa-calendar"></i>
-                                    <span>{{ $blog['date'] }}</span>
+                                    <span>{{ $blog->tanggal_upload->format('Y-m-d') }}</span>
                                 </div>
                             </div>
 

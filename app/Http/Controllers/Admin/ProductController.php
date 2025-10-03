@@ -69,24 +69,54 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
+    public function edit($id)
+{
+    $product = Product::findOrFail($id);
+    return view('pages.admin.edit.product', compact('product'));
+}
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
-        //
+        
+
+    $request->validate([
+        'nama_produk' => 'required|string|max:255',
+        'harga' => 'required|numeric|min:0',
+        'link' => 'nullable|url',
+        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:15360',
+        // 'description' => 'nullable|string',
+    ]);
+
+    $product = Product::findOrFail($id);
+
+    $imagePath = $product->image;
+    if ($request->hasFile('image')) {
+        $imagePath = $request->file('image')->store('products', 'public');
+    }
+
+    $product->update([
+        'nama_produk' => $request->nama_produk,
+        'harga' => $request->harga,
+        'link' => $request->link,
+        'image' => $imagePath,
+        'description' => $request->description,
+    ]);
+
+    return redirect()->route('admin.products')->with('success', 'Produk berhasil diupdate');
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
-    }
+    public function destroy($id)
+{
+    $product = Product::findOrFail($id);
+    $product->delete();
+
+    return redirect()->route('admin.products')->with('success', 'Produk berhasil dihapus');
+}
 }

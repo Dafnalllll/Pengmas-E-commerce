@@ -48,7 +48,7 @@
         </section>
 
         <!-- Product Section Component -->
-        <x-section.produksection />
+        <x-section.produksection :products="$products" />
 
         <!-- Footer -->
         <x-footer />

@@ -33,14 +33,19 @@
                 </div>
 
                 <div class="flex space-x-2">
-                    <button
-                        class="flex-1 bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded-lg font-medium transition-all duration-300 text-sm">
+                    <a href="{{ route('admin.products.edit', $product['id']) }}"
+                        class="flex-1 bg-gray-300 hover:bg-gray-400 text-black py-2 px-3 rounded-lg font-medium transition-all duration-300 text-sm text-center">
                         Edit
-                    </button>
-                    <button
-                        class="flex-1 bg-red-800 hover:bg-red-600 text-white py-2 px-3 rounded-lg font-medium transition-all duration-300 text-sm">
-                        Delete
-                    </button>
+                    </a>
+                    <form action="{{ route('admin.products.destroy', $product['id']) }}" method="POST" class="flex-1">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit"
+                            class="w-full bg-red-800 hover:bg-red-600 text-white py-2 px-3 rounded-lg font-medium transition-all duration-300 text-sm"
+                            onclick="return confirm('Yakin ingin menghapus produk ini?')">
+                            Delete
+                        </button>
+                    </form>
                 </div>
             </div>
         @endforeach
@@ -61,7 +66,7 @@
             <tbody>
                 @foreach ($products as $product)
                     <tr class="border-b border-gray-300 hover:bg-white/50">
-                        <td class="py-4 px-4 text-black">{{ $product['id'] }}</td>
+                        <td class="py-4 px-4 text-black">{{ $loop->iteration }}</td>
                         <td class="py-4 px-4 text-black font-medium">{{ $product['nama_produk'] }}</td>
                         <td class="py-4 px-4 text-black">{{ $product['harga'] }}</td>
                         <td class="py-4 px-4">
@@ -75,14 +80,19 @@
                         </td>
                         <td class="py-4 px-4">
                             <div class="flex space-x-2">
-                                <button
-                                    class="bg-gray-300 hover:bg-gray-400 text-black px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105">
+                                <a href="{{ route('admin.products.edit', $product['id']) }}"
+                                    class="bg-gray-300 hover:bg-gray-400 text-black px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 text-center">
                                     Edit
-                                </button>
-                                <button
-                                    class="bg-red-800 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105">
-                                    Delete
-                                </button>
+                                </a>
+                                <form action="{{ route('admin.products.destroy', $product['id']) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                        class="bg-red-800 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105"
+                                        onclick="return confirm('Yakin ingin menghapus produk ini?')">
+                                        Delete
+                                    </button>
+                                </form>
                             </div>
                         </td>
                     </tr>

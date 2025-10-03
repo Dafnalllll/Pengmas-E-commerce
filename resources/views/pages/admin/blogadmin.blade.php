@@ -19,7 +19,7 @@
 
         <!-- Blog Table -->
         <div class="mb-4 lg:mb-8">
-            <x-blogtable />
+            <x-blogtable :blogs="$blogs"/>
         </div>
 
     </div>

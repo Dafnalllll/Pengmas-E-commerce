@@ -74,7 +74,7 @@
                 </div>
                 <div class="text-2xl lg:text-3xl font-bold text-black mb-2">1</div>
                 <p class="text-gray-600 text-xs lg:text-sm mb-2 lg:mb-4">1 published</p>
-                <a href="{{ route('admin.blog') }}" class="text-red-600 hover:underline font-medium text-sm lg:text-base">Manage Blogs</a>
+                <a href="{{ route('admin.blogs') }}" class="text-red-600 hover:underline font-medium text-sm lg:text-base">Manage Blogs</a>
             </div>
         </div>
 
@@ -99,7 +99,7 @@
                 </a>
 
                 <!-- Add Blog -->
-                <a href="{{ route('admin.add.blog') }}" class="bg-[#9B59B6] hover:bg-[#8E44AD] hover:scale-105 text-white p-3 lg:p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center text-sm lg:text-base sm:col-span-2 lg:col-span-1">
+                <a href="{{ route('admin.blogs.create') }}" class="bg-[#9B59B6] hover:bg-[#8E44AD] hover:scale-105 text-white p-3 lg:p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center text-sm lg:text-base sm:col-span-2 lg:col-span-1">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:h-5 lg:w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
