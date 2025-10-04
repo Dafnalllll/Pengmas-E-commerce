@@ -111,11 +111,12 @@ $initialCount = 6;
                                 <i class="fas fa-tag mr-1"></i>
                                 <span>{{ $sop['category'] }}</span>
                             </div>
-                            <!-- Baca Selengkapnya Button -->
-                            <a href="{{ url('/sop-detail') }}"
-                                class="mt-auto inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-[#A52A2A] transition font-semibold text-sm">
-                                Baca Selengkapnya
-                            </a>
+                            <!-- Read More Button -->
+                            <div class="pt-4 border-t border-white/10">
+                                <a href="{{ url('/sop-detail') }}" class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition">
+                                    Baca Selengkapnya
+                                </a>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -126,7 +127,7 @@ $initialCount = 6;
         <div class="flex justify-center" id="lihat-semua-sop-wrapper" data-aos="fade-right" data-aos-delay="800">
             <button
                 onclick="lihatSemuaSOP()"
-                class="flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg font-semibold shadow hover:from-red-700 hover:to-red-600 transition text-base">
+                class="flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg font-semibold shadow hover:from-red-700 hover:to-red-600 transition-all hover:scale-105 text-base">
                 <i class="fa-solid fa-clipboard-list text-lg"></i>
                 Lihat Semua SOP
                 <i class="fa-solid fa-arrow-right text-lg"></i>
@@ -135,7 +136,7 @@ $initialCount = 6;
         <div class="flex justify-center" id="tutup-semua-sop-wrapper" style="display:none" data-aos="fade-left" data-aos-delay="800">
             <button
                 onclick="tutupSemuaSOP()"
-                class="flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-gray-500 to-gray-400 text-white rounded-lg font-semibold shadow hover:from-gray-700 hover:to-gray-600 transition text-base">
+                class="flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-gray-500 to-gray-400 text-white rounded-lg font-semibold shadow hover:from-gray-700 hover:to-gray-600 transition-all hover:scale-105 text-base">
                 <i class="fa-solid fa-eye-slash text-lg"></i>
                 Tutup Semua SOP
                 <i class="fa-solid fa-arrow-up text-lg"></i>
@@ -177,10 +178,12 @@ $initialCount = 6;
                                 <i class="fas fa-tag mr-1"></i>
                                 <span>${sop.category}</span>
                             </div>
-                            <a href="{{ url('/sop-detail') }}"
-                                class="mt-auto inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-[#A52A2A] transition font-semibold text-sm">
-                                Baca Selengkapnya
-                            </a>
+                            <!-- Read More Button -->
+                            <div class="pt-4 border-t border-white/10">
+                                <a href="{{ url('/sop-detail') }}" class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition">
+                                    Baca Selengkapnya
+                                </a>
+                            </div>
                         </div>
                     </article>
                 </div>

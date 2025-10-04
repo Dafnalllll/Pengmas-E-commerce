@@ -26,7 +26,7 @@
             <a href="/blog" class="font-semibold text-white/80 hover:text-[#da540c] transition">BLOG</a>
         </li>
          <li>
-            <a href="/sopp" class="font-semibold text-white/80 hover:text-[#da540c] transition">SOP</a>
+            <a href="/standar-operasional-prosedur" class="font-semibold text-white/80 hover:text-[#da540c] transition">SOP</a>
         </li>
         <li>
             <a href="/contact" class="font-semibold text-white/80 hover:text-[#da540c] transition">CONTACT</a>

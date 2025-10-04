@@ -18,6 +18,10 @@ Route::get('/blog', function () {
     return view('pages.user.blog');
 });
 
+Route::get('/standar-operasional-prosedur', function () {
+    return view('pages.user.sop');
+})->name('sop');
+
 Route::get('/blog', [FrontendBlogController::class, 'index'])->name('product');
 
 Route::get('/dashboard', function () {
