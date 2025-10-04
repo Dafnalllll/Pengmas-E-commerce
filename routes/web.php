@@ -20,6 +20,10 @@ Route::get('/blog', function () {
     return view('pages.user.blog');
 });
 
+Route::get('/standar-operasional-prosedur', function () {
+    return view('pages.user.sop');
+})->name('sop');
+
 Route::get('/blog', [FrontendBlogController::class, 'index'])->name('product');
 
 Route::get('/dashboard', function () {
@@ -135,6 +139,10 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/blog-detail', function () {
     return view('components.blogdetail');
+});
+
+Route::get('/sop-detail', function () {
+    return view('components.sopdetail');
 });
 
 Route::fallback(function () {
