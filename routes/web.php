@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Frontend\ProductController as FrontendProductController;
 use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use App\Http\Controllers\Frontend\BlogController as FrontendBlogController;
+use App\Http\Controllers\Admin\SopController as AdminSopController;
+use App\Http\Controllers\Frontend\SopController as FrontendSopController;
 
 
 use App\Http\Controllers\ProfileController;
@@ -29,6 +31,9 @@ Route::get('/dashboard', function () {
 //     return view('pages.user.product');
 // })->name('product');
 Route::get('/product', [FrontendProductController::class, 'index'])->name('blogs');
+
+// SOP
+// Route::get('/sop', [FrontendSopController::class, 'index'])->name('sops');
 
 Route::get('/contact', function () {
     return view('pages.user.contact');
@@ -78,10 +83,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     // Route Blog
     Route::get('/blogs', [AdminBlogController::class, 'index'])
-    ->name('blogs');
-    // Route::get('/add/addblog', function () {
-    //     return view('pages.admin.add.addblog');
-    // })->name('add.blogs');
+        ->name('blogs');
     Route::get('/blogs/create', [AdminBlogController::class, 'create'])
         ->name('blogs.create');
     Route::post('/blogs/store', [AdminBlogController::class, 'store'])
@@ -92,15 +94,29 @@ Route::prefix('admin')->name('admin.')->group(function () {
         ->name('blogs.update');
     Route::delete('/blogs/{blog}', [AdminBlogController::class, 'destroy'])
         ->name('blogs.destroy');
+
+    // Route SOP
+    Route::get('/sops', [AdminSopController::class, 'index'])
+        ->name('sops');
+    Route::get('/sops/create', [AdminSopController::class, 'create'])
+        ->name('sops.create');
+    Route::post('/sops/store', [AdminSopController::class, 'store'])
+        ->name('sops.store');
+    Route::get('/sops/{sop}/edit', [AdminSopController::class, 'edit'])
+        ->name('sops.edit');
+    Route::put('/sops/{sop}', [AdminSopController::class, 'update'])
+        ->name('sops.update');
+    Route::delete('/sops/{sop}', [AdminSopController::class, 'destroy'])
+        ->name('sops.destroy');
 });
 
-Route::get('/sop', function () {
-    return view('pages.admin.sop');
-})->name('admin.sop');
+// Route::get('/sop', function () {
+//     return view('pages.admin.sop');
+// })->name('admin.sop');
 
-Route::get('/admin/add/addsop', function () {
-    return view('pages.admin.add.addsop');
-})->name('admin.add.sop');
+// Route::get('/admin/add/addsop', function () {
+//     return view('pages.admin.add.addsop');
+// })->name('admin.add.sop');
 
 // Route::get('/blogadmin', function () {
 //     return view('pages.admin.blogadmin');

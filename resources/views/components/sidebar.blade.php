@@ -58,7 +58,7 @@
 
             <!-- SOP -->
             <li class="px-6 lg:px-8">
-                <a href="/sop"
+                <a href="{{ route('admin.sops') }}"
                     class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">

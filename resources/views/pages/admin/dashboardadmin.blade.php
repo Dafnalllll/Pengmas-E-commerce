@@ -58,7 +58,7 @@
                 </div>
                 <div class="text-2xl lg:text-3xl font-bold text-black mb-2">3</div>
                 <p class="text-gray-600 text-xs lg:text-sm mb-2 lg:mb-4">3 published</p>
-                <a href="{{ route('admin.sop') }}" class="text-red-600 hover:underline font-medium text-sm lg:text-base">Manage SOP</a>
+                <a href="{{ route('admin.sops') }}" class="text-red-600 hover:underline font-medium text-sm lg:text-base">Manage SOP</a>
             </div>
 
             <!-- Blogs Card -->
@@ -92,7 +92,7 @@
                 </a>
 
                 <!-- Add SOP -->
-                <a href="{{ route('admin.add.sop') }}" class="bg-[#FFB347] hover:bg-[#FF9800] hover:scale-105 text-white p-3 lg:p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center text-sm lg:text-base">
+                <a href="{{ route('admin.sops.create') }}" class="bg-[#FFB347] hover:bg-[#FF9800] hover:scale-105 text-white p-3 lg:p-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center text-sm lg:text-base">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:h-5 lg:w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>

@@ -19,7 +19,7 @@
 
         <!-- SOP Table -->
         <div class="mb-4 lg:mb-8">
-            <x-soptable />
+            <x-soptable :sops="$sops"/>
         </div>
 
     </div>
