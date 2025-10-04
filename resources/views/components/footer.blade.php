@@ -3,7 +3,7 @@
 <footer class="relative bg-black/60 backdrop-blur-md border-t border-white/20 py-16 px-4">
     <div class="max-w-6xl mx-auto">
         <!-- Main Footer Content -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <!-- Company Info -->
             <div class="space-y-6" data-aos="fade-right" data-aos-delay="200">
                 <div class="flex items-center space-x-3">
@@ -36,7 +36,7 @@
             </div>
 
             <!-- Quick Links -->
-            <div class="space-y-6 ml-[8rem]" data-aos="fade-right" data-aos-delay="400">
+            <div class="space-y-6 sm:ml-0 lg:ml-[8rem]" data-aos="fade-right" data-aos-delay="400">
                 <h4 class="text-xl font-bold text-white" style="font-family: 'Cormorant Garamond', serif;">
                     Quick Links
                 </h4>
@@ -75,7 +75,7 @@
             </div>
 
             <!-- Contact Info -->
-            <div class="space-y-6 ml-[12rem] lg:col-span-2" data-aos="fade-left" data-aos-delay="800">
+            <div class="space-y-6 sm:ml-0 lg:ml-[12rem] lg:col-span-2" data-aos="fade-left" data-aos-delay="800">
                 <h4 class="text-xl font-bold text-white" style="font-family: 'Cormorant Garamond', serif;">
                     Hubungi Kami
                 </h4>
@@ -140,8 +140,6 @@ function scrollToTop() {
     });
 }
 
-
-// DIBUAT SELALU MUNCUL
 document.addEventListener('DOMContentLoaded', function() {
     const scrollBtn = document.getElementById('scrollToTopBtn');
     scrollBtn.style.opacity = '1';
