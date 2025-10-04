@@ -2,6 +2,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <style>
+        html, body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 <nav
     class="fixed top-0 left-0 w-full z-50 bg-[#A52A2A] bg-opacity-90 flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-20 py-4 shadow-md"
@@ -18,7 +23,7 @@
     </button>
     <!-- Menu -->
     <ul id="nav-menu"
-        class="hidden md:flex flex-col md:flex-row md:space-x-8 absolute md:static top-full left-0 w-full md:w-auto bg-[#A52A2A] md:bg-transparent bg-opacity-95 md:bg-opacity-0 shadow md:shadow-none transition-all duration-300"
+        class="hidden md:flex flex-col md:flex-row md:space-x-8 absolute md:static top-full left-0 right-0 md:left-auto md:right-auto bg-[#A52A2A] md:bg-transparent bg-opacity-95 md:bg-opacity-0 shadow md:shadow-none transition-all duration-300"
         style="max-width:100vw;"
     >
         <li>
