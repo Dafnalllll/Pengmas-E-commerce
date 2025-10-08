@@ -71,7 +71,7 @@
         style="max-width:100vw;"
     >
         <li>
-            <a href="/" class="nav-link block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">HOME</a>
+            <a href="/" class="nav-link block px-6 py-3 md:p-0 font-bold text-white/80 hover:text-[#da540c] transition">HOME</a>
         </li>
         <li>
             <a href="/product" class="nav-link block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">PRODUCT</a>
