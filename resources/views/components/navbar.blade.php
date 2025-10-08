@@ -6,6 +6,50 @@
         html, body {
             overflow-x: hidden;
         }
+
+        /* Nav link hover animation */
+        .nav-link {
+            position: relative;
+            transition: transform .18s ease, color .18s ease, opacity .18s ease;
+            will-change: transform, color;
+        }
+
+        .nav-link:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: center;
+            bottom: -6px;
+            height: 3px;
+            width: 60%;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.18);
+            transition: transform .22s cubic-bezier(.2,.9,.2,1), opacity .22s;
+            opacity: 0;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-4px);
+            color: #ffedd5 !important; /* subtle light color on hover */
+        }
+
+        .nav-link:hover:after {
+            transform: translateX(-50%) scaleX(1);
+            opacity: 1;
+        }
+
+        /* Slight glow for active/hover on desktop */
+        @media (hover: hover) and (pointer: fine) {
+            .nav-link:hover {
+                text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            }
+        }
+
+        /* mobile menu links: keep readable spacing */
+        #nav-menu a {
+            display: block;
+        }
     </style>
 </head>
 <nav
@@ -27,19 +71,19 @@
         style="max-width:100vw;"
     >
         <li>
-            <a href="/" class="block px-6 py-3 md:p-0 font-bold text-white hover:text-[#da540c] transition">HOME</a>
+            <a href="/" class="nav-link block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">HOME</a>
         </li>
         <li>
-            <a href="/product" class="block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">PRODUCT</a>
+            <a href="/product" class="nav-link block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">PRODUCT</a>
         </li>
         <li>
-            <a href="/blog" class="block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">BLOG</a>
+            <a href="/blog" class="nav-link block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">BLOG</a>
         </li>
         <li>
-            <a href="/standar-operasional-prosedur" class="block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">SOP</a>
+            <a href="/standar-operasional-prosedur" class="nav-link block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">SOP</a>
         </li>
         <li>
-            <a href="/contact" class="block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">CONTACT</a>
+            <a href="/contact" class="nav-link block px-6 py-3 md:p-0 font-semibold text-white/80 hover:text-[#da540c] transition">CONTACT</a>
         </li>
     </ul>
 </nav>
