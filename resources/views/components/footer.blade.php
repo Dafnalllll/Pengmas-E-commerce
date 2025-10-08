@@ -108,13 +108,26 @@
             </div>
         </div>
 
+        {{-- Hanya include footerstats (UI-only) --}}
+        @include('components.footerstats', [
+            'today' => $today ?? 4,
+            'week'  => $week  ?? 47,
+            'month' => $month ?? 190,
+            'total' => $total ?? 1292,
+        ])
+
         <!-- Bottom Footer -->
         <div class="border-t border-white/20 pt-8" data-aos="fade-down" data-aos-delay="1200">
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <!-- Copyright -->
                 <div class="text-gray-400 text-sm text-center md:text-left">
-                    <p>&copy; {{ date('Y') }} Rasa Umbi. Seluruh hak cipta dilindungi.</p>
-                    <p class="mt-1">Dibuat dengan <i class="fas fa-heart text-red-500 mx-1"></i> untuk Indonesia</p>
+                    <p>&copy; {{ date('Y') }} Kampung Syurga. Seluruh hak cipta dilindungi.</p>
+                    <p class="mt-1">Kegiatan Pengabdian kepada Masyarakat | Program Kemitraan Masyarakat Membantu Usaha Berkembang (PKM-MUB) | Universitas Andalas | 2025</p>
+                </div>
+
+                <!-- Unand image (bottom footer) -->
+                <div class="mt-2 md:mt-0">
+                    <img src="{{ asset('img/unand.webp') }}" alt="Unand" class="h-12 object-contain">
                 </div>
             </div>
         </div>

@@ -42,16 +42,16 @@
 
             <!-- Tombol Download (tampilan saja) -->
             <div class="flex items-center gap-3 mb-6">
-                <a href="#" data-file="sop-pelaksanaan-produksi-gula-aren.pdf"
-                   class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
-                   aria-label="Download SOP Pelaksanaan Produksi Gula Aren">
-                    <i class="fa-solid fa-download mr-2"></i>Download
-                </a>
-
                 <a href="{{ url()->previous() }}"
                    class="inline-flex items-center px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition"
                    aria-label="Kembali">
                     <i class="fa-solid fa-arrow-left mr-2"></i>Kembali
+                </a>
+
+                <a href="#" data-file="sop-pelaksanaan-produksi-gula-aren.pdf"
+                   class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+                   aria-label="Download SOP Pelaksanaan Produksi Gula Aren">
+                    <i class="fa-solid fa-download mr-2"></i>Download
                 </a>
             </div>
 
