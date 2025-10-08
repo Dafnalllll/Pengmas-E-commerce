@@ -111,10 +111,13 @@ $initialCount = 6;
                                 <i class="fas fa-tag mr-1"></i>
                                 <span>{{ $sop['category'] }}</span>
                             </div>
-                            <!-- Read More Button -->
-                            <div class="pt-4 border-t border-white/10">
-                                <a href="{{ url('/sop-detail') }}" class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition">
-                                    Baca Selengkapnya
+                            <!-- Read More & Download Buttons (tampilan saja) -->
+                            <div class="pt-4 border-t border-white/10 flex gap-3">
+                                <a href="{{ url('/sop-detail') }}" class=" px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition flex items-center">
+                                    <i class="fa-solid fa-book-open mr-2"></i>Baca Selengkapnya
+                                </a>
+                                <a href="#" data-step="{{ $sop['step'] }}" class=" px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center" aria-label="Download SOP Langkah {{ $sop['step'] }}">
+                                    <i class="fa-solid fa-download mr-2"></i>Download
                                 </a>
                             </div>
                         </div>
@@ -178,10 +181,13 @@ $initialCount = 6;
                                 <i class="fas fa-tag mr-1"></i>
                                 <span>${sop.category}</span>
                             </div>
-                            <!-- Read More Button -->
-                            <div class="pt-4 border-t border-white/10">
-                                <a href="{{ url('/sop-detail') }}" class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition">
-                                    Baca Selengkapnya
+                            <!-- Read More & Download Buttons (tampilan saja) -->
+                            <div class="pt-4 border-t border-white/10 flex gap-3">
+                                <a href="{{ url('/sop-detail') }}" class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition flex items-center">
+                                    <i class="fa-solid fa-book-open mr-2"></i>Baca Selengkapnya
+                                </a>
+                                <a href="#" data-step="${sop.step}" class="inline-block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center" aria-label="Download SOP Langkah ${sop.step}">
+                                    <i class="fa-solid fa-download mr-2"></i>Download
                                 </a>
                             </div>
                         </div>
@@ -222,10 +228,15 @@ $initialCount = 6;
                                 <i class="fas fa-tag mr-1"></i>
                                 <span>${sop.category}</span>
                             </div>
-                            <a href="{{ url('/sop-detail') }}"
-                                class="mt-auto inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-[#A52A2A] transition font-semibold text-sm">
-                                Baca Selengkapnya
-                            </a>
+                            <div class="mt-auto pt-4 border-t border-white/10 flex gap-3">
+                                <a href="{{ url('/sop-detail') }}"
+                                    class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-[#A52A2A] transition font-semibold text-sm flex items-center">
+                                    <i class="fa-solid fa-book-open mr-2"></i>Baca Selengkapnya
+                                </a>
+                                <a href="#" data-step="${sop.step}" class="inline-block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition font-semibold text-sm flex items-center" aria-label="Download SOP Langkah ${sop.step}">
+                                    <i class="fa-solid fa-download mr-2"></i>Download
+                                </a>
+                            </div>
                         </div>
                     </article>
                 </div>

@@ -39,6 +39,22 @@
                 <span class="mx-2">|</span>
                 <span><i class="fa fa-calendar"></i> 03 Oktober 2025</span>
             </div>
+
+            <!-- Tombol Download (tampilan saja) -->
+            <div class="flex items-center gap-3 mb-6">
+                <a href="#" data-file="sop-pelaksanaan-produksi-gula-aren.pdf"
+                   class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+                   aria-label="Download SOP Pelaksanaan Produksi Gula Aren">
+                    <i class="fa-solid fa-download mr-2"></i>Download
+                </a>
+
+                <a href="{{ url()->previous() }}"
+                   class="inline-flex items-center px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition"
+                   aria-label="Kembali">
+                    <i class="fa-solid fa-arrow-left mr-2"></i>Kembali
+                </a>
+            </div>
+
             <!-- Gambar SOP -->
             <img src="{{ asset('img/ikonrasaumbi.png') }}" alt="Gambar SOP" class="w-full h-72 object-cover rounded-lg mb-8 shadow">
             <!-- Isi SOP -->
@@ -64,5 +80,17 @@
          <!-- Footer -->
         <x-footer />
     </main>
+
+    <!-- Optional: small script to show it's a UI-only button (remove if not needed) -->
+    <script>
+        document.addEventListener('click', function(e){
+            const btn = e.target.closest('a[data-file]');
+            if(!btn) return;
+            e.preventDefault();
+            const file = btn.getAttribute('data-file') || 'file.pdf';
+            // UI-only: tidak menampilkan alert — hanya log ke console untuk debugging ringan
+            console.info('Download (UI-only) clicked:', file);
+        });
+    </script>
 </body>
 </html>
