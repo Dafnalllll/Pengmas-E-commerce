@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
     <title>Kampung Syurga | Product</title>
      <!-- Tailwind CSS (CDN for demo) -->
     <script src="https://cdn.tailwindcss.com"></script>
