@@ -1,4 +1,3 @@
-<!-- filepath: d:\Dafa Code\pengmase-ecommerce\resources\views\pages\admin\add\addblog.blade.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +6,41 @@
     <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
     <title>Add Blog | Kampung Syurga</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Page-only override: buat sidebar menjadi statis pada layar >= lg -->
+    <style>
+        /* Hanya berlaku di halaman ini (body punya class .addblog-page) */
+        @media (min-width: 1024px) {
+            .addblog-page #sidebar {
+                position: static !important;
+                height: auto !important;
+                transform: none !important;
+                overflow: visible !important;
+            }
+            /* sembunyikan kontrol mobile yang tidak perlu pada desktop untuk halaman ini */
+            .addblog-page #mobile-menu-btn,
+            .addblog-page #sidebar-overlay,
+            .addblog-page #sidebar .lg\:hidden {
+                display: none !important;
+            }
+        }
+
+        /* Pastikan mobile tetap berfungsi normal */
+        @media (max-width: 1023px) {
+            .addblog-page #sidebar {
+                position: fixed !important;
+                height: 100vh !important;
+                transform: translateX(0) !important;
+            }
+            .addblog-page #mobile-menu-btn,
+            .addblog-page #sidebar-overlay {
+                display: block !important;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex flex-col lg:flex-row">
-    <!-- Sidebar -->
+<body class="bg-gray-100 flex flex-col lg:flex-row addblog-page">
+    <!-- Sidebar (khusus halaman ini: static agar mengikuti tinggi konten) -->
     <x-sidebar />
 
     <!-- Main Content -->
@@ -82,15 +113,15 @@
             <!-- Status Checkboxes -->
         <div class="form-group" style="margin-bottom: 30px;">
             <label style="font-size: 16px; font-weight: 600; color: #2C1810; margin-bottom: 15px; display: block;">Status</label>
-            
+
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-                <input type="checkbox" id="is_published" name="is_published" value="1" checked 
+                <input type="checkbox" id="is_published" name="is_published" value="1" checked
                        style="width: 18px; height: 18px; accent-color: #8B4513;">
                 <label for="is_published" style="font-size: 14px; color: #2C1810; cursor: pointer;">Published (Dipublikasikan)</label>
             </div>
 
             <div style="display: flex; align-items: center; gap: 10px;">
-                <input type="checkbox" id="is_featured" name="is_featured" value="1" 
+                <input type="checkbox" id="is_featured" name="is_featured" value="1"
                        style="width: 18px; height: 18px; accent-color: #8B4513;">
                 <label for="is_featured" style="font-size: 14px; color: #2C1810; cursor: pointer;">Featured (Unggulan)</label>
             </div>
