@@ -102,36 +102,68 @@
 </div>
 
 <script>
-    // Mobile menu functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('sidebar-overlay');
-        const closeSidebar = document.getElementById('close-sidebar');
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    const closeBtn = document.getElementById('close-sidebar');
 
-        // Open sidebar
-        mobileMenuBtn?.addEventListener('click', function() {
-            sidebar.classList.remove('-translate-x-full');
-            overlay.classList.remove('hidden');
-        });
+    if (!sidebar) return;
 
-        // Close sidebar
-        function closeSidebarFunc() {
-            sidebar.classList.add('-translate-x-full');
-            overlay.classList.add('hidden');
-        }
+    // helper: safe show/hide using Tailwind translate classes (works if sidebar has -translate-x-full by default)
+    function showSidebar() {
+        sidebar.classList.remove('-translate-x-full');
+        sidebar.classList.add('translate-x-0');
+        if (overlay) overlay.classList.remove('hidden');
+        // prevent body scroll when open on mobile
+        document.body.style.overflow = 'hidden';
+    }
 
-        closeSidebar?.addEventListener('click', closeSidebarFunc);
-        overlay?.addEventListener('click', closeSidebarFunc);
+    function hideSidebar() {
+        sidebar.classList.add('-translate-x-full');
+        sidebar.classList.remove('translate-x-0');
+        if (overlay) overlay.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
 
-        // Close sidebar when clicking on nav links (mobile)
-        const navLinks = sidebar.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth < 1024) {
-                    closeSidebarFunc();
-                }
-            });
-        });
+    // open (mobile button)
+    if (mobileBtn) mobileBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        showSidebar();
     });
+
+    // close (close button inside sidebar)
+    if (closeBtn) closeBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        hideSidebar();
+    });
+
+    // close when clicking overlay
+    if (overlay) overlay.addEventListener('click', function () {
+        hideSidebar();
+    });
+
+    // close on ESC
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') hideSidebar();
+    });
+
+    // responsive initial state: keep sidebar visible on lg+, hidden on mobile
+    function applyInitialState() {
+        if (window.innerWidth >= 1024) {
+            sidebar.classList.remove('-translate-x-full');
+            sidebar.classList.add('translate-x-0');
+            if (overlay) overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        } else {
+            // ensure hidden by default on small screens
+            sidebar.classList.add('-translate-x-full');
+            sidebar.classList.remove('translate-x-0');
+            if (overlay) overlay.classList.add('hidden');
+        }
+    }
+
+    applyInitialState();
+    window.addEventListener('resize', applyInitialState);
+});
 </script>

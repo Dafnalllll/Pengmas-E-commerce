@@ -25,18 +25,7 @@
             }
         }
 
-        /* Pastikan mobile tetap berfungsi normal */
-        @media (max-width: 1023px) {
-            .addblog-page #sidebar {
-                position: fixed !important;
-                height: 100vh !important;
-                transform: translateX(0) !important;
-            }
-            .addblog-page #mobile-menu-btn,
-            .addblog-page #sidebar-overlay {
-                display: block !important;
-            }
-        }
+        /* NOTE: jangan paksa sidebar visible di mobile — biarkan JS/tailwind yang mengatur */
     </style>
 </head>
 <body class="bg-gray-100 flex flex-col lg:flex-row addblog-page">
