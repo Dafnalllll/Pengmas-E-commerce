@@ -48,13 +48,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/about" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                        <a href="{{ url('/#about') }}" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group" id="footer-link-about">
                             <i class="fas fa-info-circle mr-2 group-hover:text-[#A52A2A]"></i>
                             Tentang Kami
                         </a>
                     </li>
                     <li>
-                        <a href="/products" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                        <a href="/product" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
                             <i class="fas fa-shopping-bag mr-2 group-hover:text-[#A52A2A]"></i>
                             Produk
                         </a>
@@ -63,6 +63,13 @@
                         <a href="/blog" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
                             <i class="fas fa-newspaper mr-2 group-hover:text-[#A52A2A]"></i>
                             Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/standar-operasional-prosedur" class="text-gray-300 hover:text-[#A52A2A] transition-colors duration-300 flex items-center group">
+                            <i class="fas fa-file-alt mr-2 group-hover:text-[#A52A2A]"></i>
+                            SOP
                         </a>
                     </li>
                     <li>
@@ -158,5 +165,25 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollBtn.style.opacity = '1';
     scrollBtn.style.pointerEvents = 'auto';
     scrollBtn.style.transition = 'opacity 0.3s ease';
+});
+
+// Smooth-scroll when already on homepage (prevents full page reload)
+document.addEventListener('DOMContentLoaded', function(){
+    const aboutLink = document.getElementById('footer-link-about');
+    if(!aboutLink) return;
+    aboutLink.addEventListener('click', function(e){
+        // if current path is homepage, do in-page smooth scroll
+        if(location.pathname === '/' || location.pathname === '/index.php'){
+            e.preventDefault();
+            const target = document.getElementById('about');
+            if(target){
+                // If you use a fixed navbar, adjust offset with scrollIntoView + scrollBy
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // optional small offset if navbar covers it:
+                // window.scrollBy(0, -80);
+            }
+        }
+        // otherwise let browser navigate to /#about
+    });
 });
 </script>

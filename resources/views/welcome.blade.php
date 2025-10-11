@@ -55,7 +55,9 @@
             </div>
 
              <!-- About Section -->
-            <x-section.about />
+            <div id="about" class="scroll-mt-20">
+                <x-section.about />
+            </div>
 
              <!-- Profil Section -->
             <x-section.profilsection />
