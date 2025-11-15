@@ -49,7 +49,7 @@
         </section>
 
         <!-- Product Section Component -->
-        <x-section.produksection :products="$products" />
+        <x-section.product.produksection :products="$products" />
 
         <!-- Footer -->
         <x-footer />

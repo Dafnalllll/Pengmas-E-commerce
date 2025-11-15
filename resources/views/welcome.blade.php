@@ -56,7 +56,7 @@
             <section class="relative py-20 overflow-hidden bg-[#F8F3E7]">
                 <div class="relative z-20" id="about">
                     <div class="scroll-mt-20">
-                        <x-section.about />
+                        <x-section.home.about />
                     </div>
                 </div>
             </section>
@@ -64,14 +64,14 @@
             <!-- Profil Section -->
             <section class="relative py-20 overflow-hidden bg-[#F8F3E7]">
                 <div class="relative z-20">
-                    <x-section.profilsection />
+                    <x-section.home.profilsection />
                 </div>
             </section>
 
             <!-- Visi Misi Section -->
             <section class="relative py-20 overflow-hidden bg-[#F8F3E7]">
                 <div class="relative z-20">
-                    <x-section.visimisi />
+                    <x-section.home.visimisi />
                 </div>
             </section>
 

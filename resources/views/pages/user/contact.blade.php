@@ -49,10 +49,10 @@
         </section>
 
         <!-- Contact Section -->
-        <x-section.contactsection />
+        <x-section.contact.contactsection />
 
         <!-- Map Section -->
-        <x-section.map />
+        <x-section.contact.map />
 
         <!-- Footer -->
         <x-footer />

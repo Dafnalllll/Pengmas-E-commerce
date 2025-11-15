@@ -48,7 +48,7 @@
 
 
         <!-- SOP Section Component -->
-        <x-section.sopsection />
+        <x-section.sop.sopsection />
         <!-- Footer -->
         <x-footer />
     </main>

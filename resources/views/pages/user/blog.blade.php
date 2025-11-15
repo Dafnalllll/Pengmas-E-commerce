@@ -49,7 +49,7 @@
         </section>
 
         <!-- Blog Section Component -->
-        <x-section.blogsection :blogs="$blogs"/>
+        <x-section.blog.blogsection :blogs="$blogs"/>
 
         <!-- Footer -->
         <x-footer />
