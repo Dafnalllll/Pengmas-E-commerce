@@ -53,7 +53,7 @@
     </style>
 </head>
 <nav
-    class="fixed top-0 left-0 w-full z-50 bg-[#A52A2A] bg-opacity-90 flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-20 py-4 shadow-md"
+    class="fixed top-0 left-0 w-full z-50 bg-black/40 flex items-center justify-between px-4 sm:px-6 md:px-10 lg:px-20 py-4"
     data-aos="fade-down"
     data-aos-duration="800"
 >
@@ -67,7 +67,7 @@
     </button>
     <!-- Menu -->
     <ul id="nav-menu"
-        class="hidden md:flex flex-col md:flex-row md:space-x-8 absolute md:static top-full left-0 right-0 md:left-auto md:right-auto bg-[#A52A2A] md:bg-transparent bg-opacity-95 md:bg-opacity-0 shadow md:shadow-none transition-all duration-300"
+        class="hidden md:flex flex-col md:flex-row md:space-x-8 absolute md:static top-full left-0 right-0 md:left-auto md:right-auto bg-black/80 md:bg-transparent shadow md:shadow-none transition-all duration-300"
         style="max-width:100vw;"
     >
         <li>

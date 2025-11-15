@@ -27,43 +27,53 @@
             </style>
         @endif
     </head>
-    <body class="bg-[#F8F3E7] relative overflow-x-hidden">
-        <!-- Background Video -->
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="{{ asset('video/bawang4.mp4') }}" type="video/mp4">
-        </video>
-        <!-- Overlay agar teks jelas -->
-        <div class="absolute inset-0 bg-black/40 z-10"></div>
-        {{-- Import Navbar --}}
+    <body class="bg-gradient-to-br from-[#f8f3e7] via-[#ece9e6] to-[#e5e7eb] relative overflow-x-hidden">
+        <!-- Navbar -->
         <x-navbar />
-
         <div class="relative z-20">
-            <!-- Hero Section -->
-            <div class="min-h-screen flex flex-col items-center justify-center px-4">
-                <div class="flex flex-col items-center">
-                    <span class="text-6xl font-bold text-[#E0E0E0] text-center break-words" style="font-family: 'Cormorant Garamond', serif;"
-                    data-aos="fade-up"
-                    data-aos-delay="500">
-                        Kampung Syurga
-                    </span>
-                    <span class="text-4xl text-white font-light tracking-wide mt-1 text-center break-words" style="font-family: 'Great Vibes', cursive;"
-                    data-aos="fade-down"
-                    data-aos-delay="600">
-                        Rasa yang tumbuh dari bumi nusantara
-                    </span>
+            <!-- Hero Section (langsung di sini, tidak dipisah komponen) -->
+            <div class="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
+                <!-- Background Image hanya untuk Hero -->
+                <div class="absolute inset-0 w-full h-full object-cover z-0"
+                    style="background-image: url('{{ asset('img/bawang.jpg') }}'); background-size: cover; background-position: center top; background-repeat: no-repeat; background-position-y: -300px;">
                 </div>
+                <!-- Overlay agar teks jelas -->
+                <div class="absolute inset-0 bg-black/40 z-10"></div>
+                <!-- Konten Hero di sini -->
+                <span class="relative z-20 text-6xl font-bold text-[#E0E0E0] text-center break-words" style="font-family: 'Cormorant Garamond', serif;"
+                data-aos="fade-up"
+                data-aos-delay="500">
+                    Kampung Syurga
+                </span>
+                <span class="relative z-20 text-4xl text-white font-light tracking-wide mt-1 text-center break-words" style="font-family: 'Great Vibes', cursive;"
+                data-aos="fade-down"
+                data-aos-delay="600">
+                    Rasa yang tumbuh dari bumi nusantara
+                </span>
             </div>
 
-             <!-- About Section -->
-            <div id="about" class="scroll-mt-20">
-                <x-section.about />
-            </div>
+            <!-- About Section -->
+            <section class="relative py-20 overflow-hidden bg-[#F8F3E7]">
+                <div class="relative z-20" id="about">
+                    <div class="scroll-mt-20">
+                        <x-section.about />
+                    </div>
+                </div>
+            </section>
 
-             <!-- Profil Section -->
-            <x-section.profilsection />
+            <!-- Profil Section -->
+            <section class="relative py-20 overflow-hidden bg-[#F8F3E7]">
+                <div class="relative z-20">
+                    <x-section.profilsection />
+                </div>
+            </section>
 
-                <!-- Visi Misi Section -->
-            <x-section.visimisi />
+            <!-- Visi Misi Section -->
+            <section class="relative py-20 overflow-hidden bg-[#F8F3E7]">
+                <div class="relative z-20">
+                    <x-section.visimisi />
+                </div>
+            </section>
 
             <!-- Footer -->
             <x-footer />

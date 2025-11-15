@@ -1,6 +1,6 @@
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<footer class="relative bg-black/60 backdrop-blur-md border-t border-white/20 py-16 px-4">
+<footer class="relative bg-gradient-to-br from-[#232526] via-[#414345] to-[#232526] backdrop-blur-md border-t border-white/20 py-16 px-4">
     <div class="max-w-6xl mx-auto">
         <!-- Main Footer Content -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
