@@ -15,7 +15,6 @@
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @else
             <style>
-                /*! tailwindcss v4.0.7 | MIT License | https://tailwindcss.com */
                 html { font-size: 16px; }
                 body { font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif; }
                 @media (max-width: 640px) {
@@ -27,18 +26,19 @@
             </style>
         @endif
     </head>
-    <body class="bg-gradient-to-br from-[#f8f3e7] via-[#ece9e6] to-[#e5e7eb] relative overflow-x-hidden">
+    <body class="min-h-screen flex flex-col relative overflow-x-hidden">
+        <!-- Background Image -->
+        <div class="fixed inset-0 w-full h-full object-cover z-0"
+             style="background-image: url('{{ asset('img/bawang.webp') }}'); background-size: cover; background-position: center;">
+        </div>
+        <!-- Overlay agar teks jelas -->
+        <div class="fixed inset-0 bg-black/40 z-10"></div>
+
         <!-- Navbar -->
         <x-navbar />
         <div class="relative z-20">
             <!-- Hero Section (langsung di sini, tidak dipisah komponen) -->
             <div class="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
-                <!-- Background Image hanya untuk Hero -->
-                <div class="absolute inset-0 w-full h-full object-cover z-0"
-                    style="background-image: url('{{ asset('img/bawang.jpg') }}'); background-size: cover; background-position: center top; background-repeat: no-repeat; background-position-y: -300px;">
-                </div>
-                <!-- Overlay agar teks jelas -->
-                <div class="absolute inset-0 bg-black/40 z-10"></div>
                 <!-- Konten Hero di sini -->
                 <span class="relative z-20 text-6xl font-bold text-[#E0E0E0] text-center break-words" style="font-family: 'Cormorant Garamond', serif;"
                 data-aos="fade-up"
@@ -53,7 +53,7 @@
             </div>
 
             <!-- About Section -->
-            <section class="relative py-20 overflow-hidden bg-[#F8F3E7]">
+            <section class="relative py-20 overflow-hidden">
                 <div class="relative z-20" id="about">
                     <div class="scroll-mt-20">
                         <x-section.home.about />
@@ -62,19 +62,26 @@
             </section>
 
             <!-- Profil Section -->
-            <section class="relative py-20 overflow-hidden bg-[#F8F3E7]">
+            <section class="relative py-20 overflow-hidden">
                 <div class="relative z-20">
                     <x-section.home.profilsection />
                 </div>
             </section>
 
             <!-- Visi Misi Section -->
-            <section class="relative py-20 overflow-hidden bg-[#F8F3E7]">
+            <section class="relative py-20 overflow-hidden">
                 <div class="relative z-20">
                     <x-section.home.visimisi />
                 </div>
             </section>
 
+            <!-- Team Section -->
+            <section class="relative py-20 overflow-hidden">
+                <div class="relative z-20" id="team">
+                    <x-section.home.team />
+                </div>
+            </section>
+            
             <!-- Footer -->
             <x-footer />
         </div>

@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <!-- About Text -->
             <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
-                <div class="bg-white/60 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/30 shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer">
+                <div class="bg-white/50 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/30 shadow-xl hover:scale-105 transition-all duration-500 cursor-pointer">
                     <h2 class="text-2xl sm:text-3xl font-bold text-[#A52A2A] mb-6" style="font-family: 'Cormorant Garamond', serif;">
                         Tentang Kampung Syurga
                     </h2>
