@@ -1,38 +1,3 @@
-{{-- @php
-$products = [
-    [
-        'id' => 1,
-        'name' => 'Gula Aren Kristal',
-        'description' => 'Gula aren murni dengan tekstur kristal halus untuk berbagai kebutuhan kuliner',
-        'price' => 25000,
-        'unit' => 'kg',
-        'image' => 'img/ikonrasaumbi.png',
-        'alt' => 'Niranta Gula Aren Kristal',
-        'delay' => 200
-    ],
-    [
-        'id' => 2,
-        'name' => 'Gula Aren Cair',
-        'description' => 'Sirup gula aren kental, praktis untuk campuran minuman dan makanan penutup',
-        'price' => 35000,
-        'unit' => 'botol',
-        'image' => 'img/ikonrasaumbi.png',
-        'alt' => 'Niranta Gula Aren Cair',
-        'delay' => 400
-    ],
-    [
-        'id' => 3,
-        'name' => 'Gula Aren Stick',
-        'description' => 'Kemasan stick individual, portable dan higienis untuk dibawa kemana saja',
-        'price' => 15000,
-        'unit' => 'box',
-        'image' => 'img/ikonrasaumbi.png',
-        'alt' => 'Niranta Stick',
-        'delay' => 600
-    ]
-];
-@endphp --}}
-
 @props(['products'])
 
 @php
@@ -63,14 +28,17 @@ $initialCount = $initialCount ?? 3;
                 >
                     <div
                         class="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-4 border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer hover:scale-105">
-                        <img src="{{ asset('storage/' . $product->image) }}" alt="Foto Produk"
-                            class="h-[300px] w-[350px] object-contain drop-shadow-lg">
+                        {{-- PATH KE: myproject/public/storage/products --}}
+                        <img src="{{ asset('storage/' . $product->image) }}"
+                             alt="{{ $product->nama_produk }}"
+                             class="h-[300px] w-[350px] object-contain drop-shadow-lg"
+                             onerror="this.onerror=null; this.src='{{ asset('img/ikonrasaumbi.png') }}';">
                     </div>
                     <h3 class="text-lg font-bold text-white mb-2" style="font-family: 'Cormorant Garamond', serif;">
                         {{ $product->nama_produk }}
                     </h3>
                     <p class="text-gray-300 text-sm text-center max-w-48">
-                        {{ $product->description }}
+                        {{ $product->description ?? 'Produk berkualitas tinggi' }}
                     </p>
                     <div class="mt-3">
                         <span class="text-[#A52A2A] font-bold">Rp

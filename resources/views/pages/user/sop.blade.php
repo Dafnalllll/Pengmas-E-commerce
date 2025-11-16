@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="min-h-screen flex flex-col relative overflow-x-hidden">
-    <!-- Background Video -->
-    <video autoplay loop muted playsinline class="fixed inset-0 w-full h-full object-cover z-0">
-        <source src="{{ asset('video/bawang4.mp4') }}" type="video/mp4">
-    </video>
+    <!-- Background Image -->
+    <div class="fixed inset-0 w-full h-full object-cover z-0"
+         style="background-image: url('{{ asset('img/bawang.webp') }}'); background-size: cover; background-position: center;">
+    </div>
     <!-- Overlay agar teks jelas -->
     <div class="fixed inset-0 bg-black/50 z-10"></div>
 
