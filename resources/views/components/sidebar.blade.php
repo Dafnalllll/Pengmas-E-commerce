@@ -22,7 +22,9 @@
 
     <!-- Logo Section -->
     <div class="bg-gray-500 p-4 lg:p-6 text-center">
-        <img src="/img/ikonrasaumbi.png" alt="Rasa Umbi Logo" class="h-16 lg:h-20 mx-auto mb-2">
+        <a href="{{ url('/') }}">
+            <img src="/img/ikonrasaumbi.png" alt="Rasa Umbi Logo" class="h-16 lg:h-20 mx-auto mb-2 hover:scale-105 transition-transform duration-200">
+        </a>
     </div>
 
     <!-- Navigation Menu -->

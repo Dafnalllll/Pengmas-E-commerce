@@ -48,7 +48,7 @@
 
 
         <!-- SOP Section Component -->
-        <x-section.sop.sopsection />
+        <x-section.sop.sopsection :sops="$sops"  />
         <!-- Footer -->
         <x-footer />
     </main>

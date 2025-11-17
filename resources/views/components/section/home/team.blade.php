@@ -9,7 +9,7 @@ $team = [
     ],
     'iot' => [
         [
-            'nama' => 'Rafki Harzikra Sayathan',
+            'nama' => 'Rafki Harzikra',
             'jurusan' => 'Teknik Komputer',
             'angkatan' => '2022',
             'jobdesk' => 'IoT Engineer',

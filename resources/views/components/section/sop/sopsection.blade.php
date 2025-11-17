@@ -1,77 +1,6 @@
+@props(['sops'])
+
 @php
-// Semua data SOP (misal 10 data)
-$allSops = [
-    [
-        'step' => 1,
-        'title' => 'Persiapan',
-        'desc' => 'Siapkan semua alat dan bahan yang diperlukan sebelum memulai proses.',
-        'delay' => 200,
-        'category' => 'Persiapan'
-    ],
-    [
-        'step' => 2,
-        'title' => 'Pelaksanaan',
-        'desc' => 'Lakukan setiap langkah sesuai instruksi dengan teliti dan hati-hati.',
-        'delay' => 400,
-        'category' => 'Proses'
-    ],
-    [
-        'step' => 3,
-        'title' => 'Pengecekan',
-        'desc' => 'Periksa kembali hasil pekerjaan untuk memastikan tidak ada kesalahan.',
-        'delay' => 600,
-        'category' => 'Kontrol'
-    ],
-    [
-        'step' => 4,
-        'title' => 'Pelaporan',
-        'desc' => 'Laporkan hasil akhir dan dokumentasikan proses yang telah dilakukan.',
-        'delay' => 800,
-        'category' => 'Dokumentasi'
-    ],
-    [
-        'step' => 5,
-        'title' => 'Evaluasi',
-        'desc' => 'Lakukan evaluasi terhadap proses dan hasil untuk perbaikan ke depan.',
-        'delay' => 1000,
-        'category' => 'Evaluasi'
-    ],
-    [
-        'step' => 6,
-        'title' => 'Arsip',
-        'desc' => 'Simpan seluruh dokumen dan laporan ke dalam arsip yang telah ditentukan.',
-        'delay' => 1200,
-        'category' => 'Arsip'
-    ],
-    [
-        'step' => 7,
-        'title' => 'Distribusi',
-        'desc' => 'Distribusikan produk ke tempat tujuan sesuai jadwal.',
-        'delay' => 1400,
-        'category' => 'Distribusi'
-    ],
-    [
-        'step' => 8,
-        'title' => 'Monitoring',
-        'desc' => 'Pantau proses dan hasil secara berkala.',
-        'delay' => 1600,
-        'category' => 'Monitoring'
-    ],
-    [
-        'step' => 9,
-        'title' => 'Pelatihan',
-        'desc' => 'Lakukan pelatihan rutin untuk peningkatan kualitas.',
-        'delay' => 1800,
-        'category' => 'Pelatihan'
-    ],
-    [
-        'step' => 10,
-        'title' => 'Audit',
-        'desc' => 'Audit internal untuk memastikan SOP dijalankan dengan benar.',
-        'delay' => 2000,
-        'category' => 'Audit'
-    ],
-];
 // Jumlah SOP awal yang ditampilkan
 $initialCount = 6;
 @endphp
@@ -80,8 +9,8 @@ $initialCount = 6;
     <div class="max-w-6xl mx-auto">
         <!-- SOP Grid -->
         <div id="sop-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            @foreach(array_slice($allSops, 0, $initialCount) as $sop)
-                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="{{ $sop['delay'] }}">
+            @foreach($sops->take($initialCount) as $index => $sop)
+                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="{{ 200 + ($index * 200) }}">
                     <article class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl hover:bg-white/15 hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                         <!-- Icon Section -->
                         <div class="relative overflow-hidden bg-gradient-to-br from-orange-500/20 to-red-600/20 p-8 flex flex-col items-center">
@@ -91,7 +20,7 @@ $initialCount = 6;
                             <!-- Step Badge -->
                             <div class="absolute top-4 left-4">
                                 <span class="bg-[#A52A2A] text-white text-xs font-semibold px-3 py-1 rounded-full">
-                                    Langkah {{ $sop['step'] }}
+                                    SOP {{ $index + 1 }}
                                 </span>
                             </div>
                         </div>
@@ -100,23 +29,23 @@ $initialCount = 6;
                             <!-- Title -->
                             <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#A52A2A] transition-colors duration-300"
                                 style="font-family: 'Cormorant Garamond', serif;">
-                                {{ $sop['title'] }}
+                                {{ $sop->nama_file }}
                             </h3>
                             <!-- Description -->
                             <p class="text-gray-300 text-sm mb-4 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                                {{ $sop['desc'] }}
+                                Tanggal: {{ \Carbon\Carbon::parse($sop->tanggal)->format('d M Y') }}
                             </p>
                             <!-- Category Info -->
                             <div class="flex items-center text-xs text-gray-400 mb-4">
                                 <i class="fas fa-tag mr-1"></i>
-                                <span>{{ $sop['category'] }}</span>
+                                <span>Dokumen SOP</span>
                             </div>
-                            <!-- Read More & Download Buttons (tampilan saja) -->
+                            <!-- Read More & Download Buttons -->
                             <div class="pt-4 border-t border-white/10 flex gap-3">
-                                <a href="{{ url('/sop-detail') }}" class=" px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition flex items-center">
+                                <a href="{{ asset('storage/' . $sop->dokumen) }}" target="_blank" class="px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition flex items-center">
                                     <i class="fa-solid fa-book-open mr-2"></i>Baca Selengkapnya
                                 </a>
-                                <a href="#" data-step="{{ $sop['step'] }}" class=" px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center" aria-label="Download SOP Langkah {{ $sop['step'] }}">
+                                <a href="{{ asset('storage/' . $sop->dokumen) }}" download class="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center" aria-label="Download SOP {{ $sop->nama_file }}">
                                     <i class="fa-solid fa-download mr-2"></i>Download
                                 </a>
                             </div>
@@ -126,7 +55,7 @@ $initialCount = 6;
             @endforeach
         </div>
         <!-- Tombol Lihat Semua SOP & Tutup Semua SOP -->
-        @if(count($allSops) > $initialCount)
+        @if($sops->count() > $initialCount)
         <div class="flex justify-center" id="lihat-semua-sop-wrapper" data-aos="fade-right" data-aos-delay="800">
             <button
                 onclick="lihatSemuaSOP()"
@@ -150,14 +79,16 @@ $initialCount = 6;
 </section>
 
 <script>
-    const allSops = @json($allSops);
+    const allSops = @json($sops);
     const initialCount = {{ $initialCount }};
+
     function lihatSemuaSOP() {
         const sopGrid = document.getElementById('sop-grid');
         sopGrid.innerHTML = '';
-        allSops.forEach(function(sop) {
+        allSops.forEach(function(sop, index) {
+            const delay = 200 + (index * 200);
             sopGrid.innerHTML += `
-                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="${sop.delay}">
+                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="${delay}">
                     <article class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl hover:bg-white/15 hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                         <div class="relative overflow-hidden bg-gradient-to-br from-orange-500/20 to-red-600/20 p-8 flex flex-col items-center">
                             <span class="inline-flex items-center justify-center h-16 w-16">
@@ -165,28 +96,27 @@ $initialCount = 6;
                             </span>
                             <div class="absolute top-4 left-4">
                                 <span class="bg-[#A52A2A] text-white text-xs font-semibold px-3 py-1 rounded-full">
-                                    Langkah ${sop.step}
+                                    SOP ${index + 1}
                                 </span>
                             </div>
                         </div>
                         <div class="p-6 flex flex-col h-full">
                             <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#A52A2A] transition-colors duration-300"
                                 style="font-family: 'Cormorant Garamond', serif;">
-                                ${sop.title}
+                                ${sop.nama_file}
                             </h3>
                             <p class="text-gray-300 text-sm mb-4 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                                ${sop.desc}
+                                Tanggal: ${new Date(sop.tanggal).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
                             </p>
                             <div class="flex items-center text-xs text-gray-400 mb-4">
                                 <i class="fas fa-tag mr-1"></i>
-                                <span>${sop.category}</span>
+                                <span>Dokumen SOP</span>
                             </div>
-                            <!-- Read More & Download Buttons (tampilan saja) -->
                             <div class="pt-4 border-t border-white/10 flex gap-3">
-                                <a href="{{ url('/sop-detail') }}" class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition flex items-center">
+                                <a href="{{ asset('storage') }}/${sop.dokumen}" target="_blank" class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition flex items-center">
                                     <i class="fa-solid fa-book-open mr-2"></i>Baca Selengkapnya
                                 </a>
-                                <a href="#" data-step="${sop.step}" class="inline-block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center" aria-label="Download SOP Langkah ${sop.step}">
+                                <a href="{{ asset('storage') }}/${sop.dokumen}" download class="inline-block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center" aria-label="Download SOP ${sop.nama_file}">
                                     <i class="fa-solid fa-download mr-2"></i>Download
                                 </a>
                             </div>
@@ -202,9 +132,10 @@ $initialCount = 6;
     function tutupSemuaSOP() {
         const sopGrid = document.getElementById('sop-grid');
         sopGrid.innerHTML = '';
-        allSops.slice(0, initialCount).forEach(function(sop) {
+        allSops.slice(0, initialCount).forEach(function(sop, index) {
+            const delay = 200 + (index * 200);
             sopGrid.innerHTML += `
-                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="${sop.delay}">
+                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="${delay}">
                     <article class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl hover:bg-white/15 hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                         <div class="relative overflow-hidden bg-gradient-to-br from-orange-500/20 to-red-600/20 p-8 flex flex-col items-center">
                             <span class="inline-flex items-center justify-center h-16 w-16">
@@ -212,28 +143,28 @@ $initialCount = 6;
                             </span>
                             <div class="absolute top-4 left-4">
                                 <span class="bg-[#A52A2A] text-white text-xs font-semibold px-3 py-1 rounded-full">
-                                    Langkah ${sop.step}
+                                    SOP ${index + 1}
                                 </span>
                             </div>
                         </div>
                         <div class="p-6 flex flex-col h-full">
                             <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#A52A2A] transition-colors duration-300"
                                 style="font-family: 'Cormorant Garamond', serif;">
-                                ${sop.title}
+                                ${sop.nama_file}
                             </h3>
                             <p class="text-gray-300 text-sm mb-4 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                                ${sop.desc}
+                                Tanggal: ${new Date(sop.tanggal).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
                             </p>
                             <div class="flex items-center text-xs text-gray-400 mb-4">
                                 <i class="fas fa-tag mr-1"></i>
-                                <span>${sop.category}</span>
+                                <span>Dokumen SOP</span>
                             </div>
                             <div class="mt-auto pt-4 border-t border-white/10 flex gap-3">
-                                <a href="{{ url('/sop-detail') }}"
+                                <a href="{{ asset('storage') }}/${sop.dokumen}" target="_blank"
                                     class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-[#A52A2A] transition font-semibold text-sm flex items-center">
                                     <i class="fa-solid fa-book-open mr-2"></i>Baca Selengkapnya
                                 </a>
-                                <a href="#" data-step="${sop.step}" class="inline-block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition font-semibold text-sm flex items-center" aria-label="Download SOP Langkah ${sop.step}">
+                                <a href="{{ asset('storage') }}/${sop.dokumen}" download class="inline-block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition font-semibold text-sm flex items-center" aria-label="Download SOP ${sop.nama_file}">
                                     <i class="fa-solid fa-download mr-2"></i>Download
                                 </a>
                             </div>
