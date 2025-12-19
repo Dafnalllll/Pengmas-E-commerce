@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nama_produk');
             $table->decimal('harga', 12, 0);
-            $table->string('link')->nullable();;
-            $table->string('image')->nullable();; // path foto
+            $table->string('link')->nullable();
+            $table->string('image')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
         });

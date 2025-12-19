@@ -7,26 +7,7 @@
     <title>Add Blog | Kampung Syurga</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Page-only override: buat sidebar menjadi statis pada layar >= lg -->
-    <style>
-        /* Hanya berlaku di halaman ini (body punya class .addblog-page) */
-        @media (min-width: 1024px) {
-            .addblog-page #sidebar {
-                position: static !important;
-                height: auto !important;
-                transform: none !important;
-                overflow: visible !important;
-            }
-            /* sembunyikan kontrol mobile yang tidak perlu pada desktop untuk halaman ini */
-            .addblog-page #mobile-menu-btn,
-            .addblog-page #sidebar-overlay,
-            .addblog-page #sidebar .lg\:hidden {
-                display: none !important;
-            }
-        }
-
-        /* NOTE: jangan paksa sidebar visible di mobile — biarkan JS/tailwind yang mengatur */
-    </style>
+   
 </head>
 <body class="bg-gray-100 flex flex-col lg:flex-row addblog-page">
     <!-- Sidebar (khusus halaman ini: static agar mengikuti tinggi konten) -->

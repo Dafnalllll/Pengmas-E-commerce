@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_blog'); // Sesuai admin form
-            $table->date('tanggal_upload'); // Sesuai admin form
-            $table->string('kategori')->nullable(); // Sesuai admin form
-            $table->text('excerpt'); // Sesuai admin form - untuk ringkasan
-            $table->longText('content'); // Konten lengkap blog
-            $table->string('image')->nullable(); // Featured image
-            $table->string('author')->default('Admin'); // Penulis
+            $table->string('judul_blog');
+            $table->date('tanggal_upload');
+            $table->string('kategori')->nullable();
+            $table->text('excerpt');
+            $table->longText('content');
+            $table->string('image')->nullable();
+            $table->string('author')->default('Admin');
             $table->boolean('is_published')->default(false);
             $table->boolean('is_featured')->default(false);
             $table->timestamps();

@@ -9,14 +9,17 @@ use App\Http\Controllers\Frontend\SopController as FrontendSopController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Sop; // ← TAMBAHKAN INI
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
+
+Route::middleware(['track.page'])->group(function () {
 
 //User Routes
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
-Route::get('/blog', [FrontendBlogController::class, 'index'])->name('product');
-
+Route::get('/blog', [FrontendBlogController::class, 'index'])->name('blogs');
+Route::get('/blog/{id}', [FrontendBlogController::class, 'show'])->name('blog.detail');
 // GANTI ROUTE INI (baris 18-20)
 Route::get('/standar-operasional-prosedur', function () {
     $sops = Sop::latest()->get();
@@ -27,7 +30,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/product', [FrontendProductController::class, 'index'])->name('blogs');
+Route::get('/product', [FrontendProductController::class, 'index'])->name('products');
 
 Route::get('/contact', function () {
     return view('pages.user.contact');
@@ -41,15 +44,18 @@ Route::get('/sop-detail', function () {
     return view('components.sopdetail');
 });
 
+});
+
 // ==========================================
 // ADMIN ROUTES - PROTECTED WITH AUTH MIDDLEWARE
 // ==========================================
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
 
     // Dashboard Admin
-    Route::get('/', function () {
-        return view('pages.admin.dashboardadmin');
-    })->name('dashboard');
+        Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+
+        Route::get('/statistics', [AdminController::class, 'statistics'])->name('statistics');
+
 
     // Route Produk
     Route::get('/products', [AdminProductController::class, 'index'])

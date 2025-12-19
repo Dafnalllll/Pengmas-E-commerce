@@ -1,12 +1,12 @@
 <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<footer class="relative bg-black/60 backdrop-blur-md border-t border-white/20 py-16 px-4">
+<footer class="relative bg-black/60 backdrop-blur-md border-t border-white/20 py-10 px-2 sm:py-16 sm:px-4">
     <div class="max-w-6xl mx-auto">
         <!-- Main Footer Content -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <!-- Company Info -->
-            <div class="space-y-6" data-aos="fade-right" data-aos-delay="200">
-                <div class="flex items-center space-x-3">
+            <div class="space-y-6 flex flex-col items-center sm:items-start text-center sm:text-left" data-aos="fade-right" data-aos-delay="200">
+                <div class="flex flex-col items-center sm:flex-row sm:items-center sm:space-x-3 space-y-2 sm:space-y-0">
                     <img src="{{ asset('img/ikonrasaumbi.png') }}"
                          alt="Rasa Umbi Logo"
                          class="h-12 w-auto object-contain drop-shadow-lg">
@@ -15,28 +15,28 @@
                     </h3>
                 </div>
                 <p class="text-gray-300 text-sm leading-relaxed">
-                    Menghadirkan kekayaan rasa asli Indonesia melalui produk-produk berkualitas tinggi yang terbuat dari umbi-umbian nusantara.
-                </p>
+                   Menghadirkan ekosistem terpadu di mana lahan menghasilkan berkah, mendukung pendidikan santri, dan mendorong inovasi yang berkelanjutan. </p>
 
                 <!-- Social Media -->
-                <div class="flex space-x-4">
-                    <a href="#" class="bg-white/10 hover:bg-blue-500 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
-                        <i class="fab fa-facebook-f text-white text-lg"></i>
-                    </a>
-                    <a href="#" class="bg-white/10 hover:bg-pink-600 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                <div class="flex justify-center sm:justify-start space-x-4">
+                    <a href="https://www.instagram.com/kampungsyurgaaa/# " class="bg-white/10 hover:bg-pink-600 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
                         <i class="fab fa-instagram text-white text-lg"></i>
                     </a>
-                    <a href="#" class="bg-white/10 hover:bg-green-500 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                    <a href="https://api.whatsapp.com/send/?phone=62895803888884&text&type=phone_number&app_absent=0 " class="bg-white/10 hover:bg-green-500 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
                         <i class="fab fa-whatsapp text-white text-lg"></i>
                     </a>
-                    <a href="#" class="bg-white/10 hover:bg-red-600 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                    <a href="https://www.youtube.com/@jabalrahmahofficial4989 " class="bg-white/10 hover:bg-red-600 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
                         <i class="fab fa-youtube text-white text-lg"></i>
+                    </a>
+                    <a href="https://s.shopee.co.id/5fhQxI9Ckv?share_channel_code=1 " class="bg-white/10 hover:bg-orange-500 p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                        <i class="fas fa-store text-white text-lg"></i>
+                        <!-- Jika ingin pakai ikon Shopee SVG khusus, bisa ganti di sini -->
                     </a>
                 </div>
             </div>
 
             <!-- Quick Links -->
-            <div class="space-y-6 sm:ml-0 lg:ml-[8rem]" data-aos="fade-right" data-aos-delay="400">
+            <div class="space-y-6 sm:ml-0 lg:ml-[8rem] flex flex-col items-center sm:items-start text-center sm:text-left" data-aos="fade-right" data-aos-delay="400">
                 <h4 class="text-xl font-bold text-white" style="font-family: 'Cormorant Garamond', serif;">
                     Quick Links
                 </h4>
@@ -82,30 +82,24 @@
             </div>
 
             <!-- Contact Info -->
-            <div class="space-y-6 sm:ml-0 lg:ml-[12rem] lg:col-span-2" data-aos="fade-left" data-aos-delay="800">
+            <div class="space-y-6 sm:ml-0 lg:ml-[12rem] lg:col-span-2 flex flex-col items-center sm:items-start text-center sm:text-left" data-aos="fade-left" data-aos-delay="800">
                 <h4 class="text-xl font-bold text-white" style="font-family: 'Cormorant Garamond', serif;">
                     Hubungi Kami
                 </h4>
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3">
+                <div class="space-y-4 w-full">
+                    <div class="flex flex-col sm:flex-row items-center sm:space-x-3 space-y-1 sm:space-y-0">
                         <i class="fas fa-map-marker-alt text-[#A52A2A]"></i>
                         <span class="text-gray-300 text-sm">
-                            Jl. Raya Umbi No. 123, Jakarta Selatan, Indonesia 12345
+                        Pondok Pesantren Jabal Rahmah Anau Kadok Talang Solok. Danau, Gn. Talang, Kabupaten Solok, Sumatera Barat 27365, Indonesia.
                         </span>
                     </div>
-                    <div class="flex items-center space-x-3">
-                        <i class="fas fa-phone text-[#A52A2A]"></i>
-                        <a href="tel:+6282112345678" class="text-gray-300 hover:text-white transition-colors duration-300">
-                            +62 821-1234-5678
-                        </a>
-                    </div>
-                    <div class="flex items-center space-x-3">
+                    <div class="flex flex-col sm:flex-row items-center sm:space-x-3 space-y-1 sm:space-y-0">
                         <i class="fas fa-envelope text-[#A52A2A]"></i>
-                        <a href="mailto:info@rasaumbi.com" class="text-gray-300 hover:text-white transition-colors duration-300">
-                            info@rasaumbi.com
+                        <a href="mailto:KampungSyurga@gmail.com" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        Kampung Syurga@gmail.com
                         </a>
                     </div>
-                    <div class="flex items-center space-x-3">
+                    <div class="flex flex-col sm:flex-row items-center sm:space-x-3 space-y-1 sm:space-y-0">
                         <i class="fas fa-clock text-[#A52A2A]"></i>
                         <span class="text-gray-300 text-sm">
                             Sen-Jum: 08:00-17:00, Sabtu: 08:00-15:00
@@ -125,7 +119,7 @@
 
         <!-- Bottom Footer -->
         <div class="border-t border-white/20 pt-8" data-aos="fade-down" data-aos-delay="1200">
-            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-center md:text-left">
                 <!-- Copyright -->
                 <div class="text-gray-400 text-sm text-center md:text-left">
                     <p>&copy; {{ date('Y') }} Kampung Syurga. Seluruh hak cipta dilindungi.</p>
@@ -133,7 +127,7 @@
                 </div>
 
                 <!-- Unand image (bottom footer) -->
-                <div class="mt-2 md:mt-0">
+                <div class="mt-2 md:mt-0 flex justify-center md:justify-end w-full">
                     <img src="{{ asset('img/unand.webp') }}" alt="Unand" class="h-12 object-contain">
                 </div>
             </div>
@@ -141,10 +135,10 @@
     </div>
 
     <!-- Scroll to Top Button Wrapper (tanpa AOS) -->
-    <div class="fixed bottom-8 right-8 z-50">
+    <div class="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50">
         <!-- Scroll to Top Button (hover membesar) -->
         <button onclick="scrollToTop()"
-                class="bg-[#A52A2A] hover:from-[#A52A2A] hover:to-red-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+                class="bg-[#A52A2A] hover:from-[#A52A2A] hover:to-red-700 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
                 id="scrollToTopBtn">
             <i class="fas fa-arrow-up"></i>
         </button>

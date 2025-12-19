@@ -1,6 +1,6 @@
-<!-- filepath: d:\Dafa Code\pengmase-ecommerce\resources\views\components\sidebar.blade.php -->
+<!-- filepath: d:\Pengmas-E-commerce\resources\views\components\sidebar.blade.php -->
 <!-- Mobile Menu Button -->
-<button id="mobile-menu-btn" class="lg:hidden fixed top-4 left-4 z-50 bg-gray-500 text-white p-2 rounded-lg">
+<button id="mobile-menu-btn" class="lg:hidden fixed top-4 left-4 z-50 bg-gray-500 text-white p-2 rounded-lg shadow-lg">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
     </svg>
@@ -11,9 +11,9 @@
 
 <!-- Sidebar -->
 <div id="sidebar"
-    class="fixed lg:static h-screen w-64 bg-gray-500 flex flex-col shadow-lg transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out z-50">
+    class="fixed top-0 left-0 h-screen w-64 bg-gray-500 flex flex-col shadow-lg transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out z-50 overflow-y-auto">
     <!-- Close Button (Mobile Only) -->
-    <button id="close-sidebar" class="lg:hidden absolute top-4 right-4 text-white">
+    <button id="close-sidebar" class="lg:hidden absolute top-4 right-4 text-white z-10">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -21,34 +21,46 @@
     </button>
 
     <!-- Logo Section -->
-    <div class="bg-gray-500 p-4 lg:p-6 text-center">
-        <a href="{{ url('/') }}">
-            <img src="/img/ikonrasaumbi.png" alt="Rasa Umbi Logo" class="h-16 lg:h-20 mx-auto mb-2 hover:scale-105 transition-transform duration-200">
+    <div class="bg-gray-500 p-4 lg:p-6 text-center flex-shrink-0">
+        <a href="{{ route('welcome') }}">
+            <img src="/img/ikonrasaumbi.png" alt="Rasa Umbi Logo"
+                class="h-16 lg:h-20 mx-auto mb-2 transition-transform duration-200 ease-in-out hover:scale-110 cursor-pointer">
         </a>
     </div>
 
     <!-- Navigation Menu -->
-    <nav class="flex-1 py-4 lg:py-6">
+    <nav class="flex-1 py-4 lg:py-6 overflow-y-auto">
         <ul class="space-y-2 font-[Carena]">
             <!-- Dashboard -->
             <li class="px-6 lg:px-8">
                 <a href="{{ route('admin.dashboard') }}"
-                    class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors">
+                    class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors {{ request()->routeIs('admin.dashboard') ? 'text-red-500 border-l-4 border-red-500 -ml-1 pl-1' : '' }}">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M8 5a2 2 0 012-2h4a2 2 0 012 2v2H8V5z" />
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                     </svg>
                     Dashboard
+                </a>
+            </li>
+
+            <!-- Statistics -->
+            <li class="px-6 lg:px-8">
+                <a href="{{ route('admin.statistics') }}"
+                    class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors {{ request()->routeIs('admin.statistics') ? 'text-red-500 border-l-4 border-red-500 -ml-1 pl-1' : '' }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                    Statistics
                 </a>
             </li>
 
             <!-- Products -->
             <li class="px-6 lg:px-8">
                 <a href="{{ route('admin.products') }}"
-                    class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors">
+                    class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors {{ request()->routeIs('admin.products*') ? 'text-red-500 border-l-4 border-red-500 -ml-1 pl-1' : '' }}">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -61,7 +73,7 @@
             <!-- SOP -->
             <li class="px-6 lg:px-8">
                 <a href="{{ route('admin.sops') }}"
-                    class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors">
+                    class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors {{ request()->routeIs('admin.sops*') ? 'text-red-500 border-l-4 border-red-500 -ml-1 pl-1' : '' }}">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -74,7 +86,7 @@
             <!-- Blogs -->
             <li class="px-6 lg:px-8">
                 <a href="{{ route('admin.blogs') }}"
-                    class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors">
+                    class="flex items-center py-3 text-[#F8F3E7] hover:text-red-500 font-medium transition-colors {{ request()->routeIs('admin.blogs*') ? 'text-red-500 border-l-4 border-red-500 -ml-1 pl-1' : '' }}">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -87,11 +99,11 @@
     </nav>
 
     <!-- Logout -->
-    <div class="p-4 lg:p-6">
+    <div class="p-4 lg:p-6 flex-shrink-0 border-t border-gray-600">
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit"
-                class="w-full flex items-center text-left py-3 px-4 text-[#F8F3E7] hover:text-red-500 font-medium font-[Carena] transition-colors">
+                class="w-full flex items-center text-left py-3 px-4 text-[#F8F3E7] hover:text-red-500 hover:bg-gray-600 rounded-lg font-medium font-[Carena] transition-all duration-200">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -103,6 +115,15 @@
     </div>
 </div>
 
+<!-- Main Content Wrapper (untuk kompensasi lebar sidebar di desktop) -->
+<style>
+    @media (min-width: 1024px) {
+        body {
+            margin-left: 16rem; /* 256px = w-64 */
+        }
+    }
+</style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -112,12 +133,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!sidebar) return;
 
-    // helper: safe show/hide using Tailwind translate classes (works if sidebar has -translate-x-full by default)
     function showSidebar() {
         sidebar.classList.remove('-translate-x-full');
         sidebar.classList.add('translate-x-0');
         if (overlay) overlay.classList.remove('hidden');
-        // prevent body scroll when open on mobile
         document.body.style.overflow = 'hidden';
     }
 
@@ -128,29 +147,24 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
     }
 
-    // open (mobile button)
     if (mobileBtn) mobileBtn.addEventListener('click', function (e) {
         e.preventDefault();
         showSidebar();
     });
 
-    // close (close button inside sidebar)
     if (closeBtn) closeBtn.addEventListener('click', function (e) {
         e.preventDefault();
         hideSidebar();
     });
 
-    // close when clicking overlay
     if (overlay) overlay.addEventListener('click', function () {
         hideSidebar();
     });
 
-    // close on ESC
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') hideSidebar();
     });
 
-    // responsive initial state: keep sidebar visible on lg+, hidden on mobile
     function applyInitialState() {
         if (window.innerWidth >= 1024) {
             sidebar.classList.remove('-translate-x-full');
@@ -158,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (overlay) overlay.classList.add('hidden');
             document.body.style.overflow = '';
         } else {
-            // ensure hidden by default on small screens
             sidebar.classList.add('-translate-x-full');
             sidebar.classList.remove('translate-x-0');
             if (overlay) overlay.classList.add('hidden');

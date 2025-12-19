@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
-    <title>Add SOP | Kampung Syurga</title>
+    <title>Edit SOP | Kampung Syurga</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -22,15 +22,16 @@
         <!-- Form -->
         <form action="{{ route('admin.sops.update', $sop->id) }}" method="POST" enctype="multipart/form-data" class="w-full">
             @csrf
-    @method('PUT')
+            @method('PUT')
 
-            <!-- Upload File PDF -->
-            <div class="mb-6 flex justify-center">
+            <!-- Upload File PDF & Video -->
+            <div class="mb-6 flex justify-center gap-6 flex-col md:flex-row">
+                <!-- Upload PDF -->
                 <div
                     class="w-80 h-32 lg:h-40 border-2 border-dashed border-gray-500 rounded-lg bg-gray-100 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-300 transition-colors">
                     @if($sop->dokumen)
-                <p class="text-sm text-gray-700 mb-2">File saat ini: **{{ $sop->dokumen }}**</p>
-            @endif
+                        <p class="text-sm text-gray-700 mb-2">File PDF saat ini: <b>{{ $sop->dokumen }}</b></p>
+                    @endif
                     <input type="file" id="dokumen" name="dokumen" class="hidden" accept=".pdf">
                     <label for="dokumen" class="cursor-pointer text-center p-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 lg:h-10 lg:w-10 text-black mx-auto mb-2"
@@ -40,6 +41,23 @@
                         </svg>
                         <span class="text-base lg:text-lg font-medium text-black">Upload File PDF Baru (Opsional)</span>
                         <p class="text-xs lg:text-sm text-gray-600 mt-1">Only PDF files allowed</p>
+                    </label>
+                </div>
+                <!-- Upload Video -->
+                <div
+                    class="w-80 h-32 lg:h-40 border-2 border-dashed border-gray-500 rounded-lg bg-gray-100 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-300 transition-colors">
+                    @if($sop->video)
+                        <p class="text-sm text-gray-700 mb-2">Video saat ini: <b>{{ $sop->video }}</b></p>
+                    @endif
+                    <input type="file" id="video" name="video" class="hidden" accept="video/*">
+                    <label for="video" class="cursor-pointer text-center p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 lg:h-10 lg:w-10 text-black mx-auto mb-2"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6v12a2 2 0 002 2h8a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2z" />
+                        </svg>
+                        <span class="text-base lg:text-lg font-medium text-black">Upload Video SOP (Opsional)</span>
+                        <p class="text-xs lg:text-sm text-gray-600 mt-1">Video file (mp4, webm, dll)</p>
                     </label>
                 </div>
             </div>

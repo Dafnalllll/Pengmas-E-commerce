@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('sops', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_file'); // Nama file SOP
-            $table->date('tanggal'); // Tanggal upload/berlaku
-            $table->string('dokumen')->nullable(); // path dokumen (pdf/word)
+            $table->string('nama_file');
+            $table->date('tanggal');
+            $table->string('dokumen')->nullable();
             $table->timestamps();
         });
     }

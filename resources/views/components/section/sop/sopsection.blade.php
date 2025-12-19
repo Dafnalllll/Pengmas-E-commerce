@@ -5,48 +5,54 @@
 $initialCount = 6;
 @endphp
 
-<section class="pt-40 pb-20 px-4">
-    <div class="max-w-6xl mx-auto">
+<section class="pt-40 pb-20 px-4 w-full">
+    <div class="w-full mx-auto">
         <!-- SOP Grid -->
-        <div id="sop-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div id="sop-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 items-stretch w-full">
             @foreach($sops->take($initialCount) as $index => $sop)
-                <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="{{ 200 + ($index * 200) }}">
-                    <article class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl hover:bg-white/15 hover:shadow-2xl transition-all duration-300 overflow-hidden group">
-                        <!-- Icon Section -->
-                        <div class="relative overflow-hidden bg-gradient-to-br from-orange-500/20 to-red-600/20 p-8 flex flex-col items-center">
-                            <span class="inline-flex items-center justify-center h-16 w-16">
-                                <img src="{{ asset('img/ikonrasaumbi.png') }}" alt="ikonrasaumbi" class="h-20 w-20 object-contain">
-                            </span>
+                <div class="cursor-pointer h-full flex" data-aos="fade-up" data-aos-delay="{{ 200 + ($index * 200) }}">
+                    <article class="flex flex-col h-full w-full max-w-sm bg-white/80 backdrop-blur-lg rounded-3xl border border-[#A52A2A]/10 shadow-2xl hover:shadow-[#A52A2A]/30 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 overflow-hidden group mx-auto">
+                        <!-- Gambar/Video Full Card -->
+                        <div class="relative w-full aspect-[16/10] overflow-hidden rounded-t-3xl bg-gradient-to-br from-orange-500/20 to-red-600/20">
+                            @if(!empty($sop->video))
+                                <video controls class="absolute top-0 left-0 w-full h-full object-cover rounded-t-3xl bg-[#222]">
+                                    <source src="{{ asset('storage/' . $sop->video) }}" type="video/mp4">
+                                    Browser Anda tidak mendukung video.
+                                </video>
+                            @else
+                                <img src="{{ asset('img/ikonrasaumbi.png') }}" alt="ikonrasaumbi"
+                                     class="absolute top-0 left-0 w-full h-full object-cover rounded-t-3xl">
+                            @endif
                             <!-- Step Badge -->
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-[#A52A2A] text-white text-xs font-semibold px-3 py-1 rounded-full">
+                            <div class="absolute top-4 left-4 z-10">
+                                <span class="bg-[#A52A2A] text-white text-sm font-bold px-4 py-1 rounded-full shadow-lg tracking-wide">
                                     SOP {{ $index + 1 }}
                                 </span>
                             </div>
                         </div>
                         <!-- Content Section -->
-                        <div class="p-6 flex flex-col h-full">
+                        <div class="p-4 flex flex-col flex-1">
                             <!-- Title -->
-                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#A52A2A] transition-colors duration-300"
+                            <h3 class="text-xl font-bold text-[#A52A2A] mb-2 group-hover:text-[#7a1d1d] transition-colors duration-300"
                                 style="font-family: 'Cormorant Garamond', serif;">
                                 {{ $sop->nama_file }}
                             </h3>
                             <!-- Description -->
-                            <p class="text-gray-300 text-sm mb-4 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                            <p class="text-gray-700 text-base mb-3 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
                                 Tanggal: {{ \Carbon\Carbon::parse($sop->tanggal)->format('d M Y') }}
                             </p>
                             <!-- Category Info -->
-                            <div class="flex items-center text-xs text-gray-400 mb-4">
+                            <div class="flex items-center text-xs text-gray-500 mb-4">
                                 <i class="fas fa-tag mr-1"></i>
                                 <span>Dokumen SOP</span>
                             </div>
                             <!-- Read More & Download Buttons -->
-                            <div class="pt-4 border-t border-white/10 flex gap-3">
-                                <a href="{{ asset('storage/' . $sop->dokumen) }}" target="_blank" class="px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition flex items-center">
-                                    <i class="fa-solid fa-book-open mr-2"></i>Baca Selengkapnya
+                            <div class="pt-4 border-t border-[#A52A2A]/10 flex gap-3 mt-auto">
+                                <a href="{{ asset('storage/' . $sop->dokumen) }}" target="_blank" class="px-4 py-2 bg-[#A52A2A] text-white rounded-full font-semibold shadow hover:bg-red-600 transition-all flex items-center gap-2 text-sm hover:scale-105">
+                                    <i class="fa-solid fa-book-open"></i>Baca Selengkapnya
                                 </a>
-                                <a href="{{ asset('storage/' . $sop->dokumen) }}" download class="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center" aria-label="Download SOP {{ $sop->nama_file }}">
-                                    <i class="fa-solid fa-download mr-2"></i>Download
+                                <a href="{{ asset('storage/' . $sop->dokumen) }}" download class="px-4 py-2 bg-gray-800 text-white rounded-full font-semibold shadow hover:bg-gray-700 transition-all flex items-center gap-2 text-sm hover:scale-105" aria-label="Download SOP {{ $sop->nama_file }}">
+                                    <i class="fa-solid fa-download"></i>Download
                                 </a>
                             </div>
                         </div>
@@ -89,35 +95,41 @@ $initialCount = 6;
             const delay = 200 + (index * 200);
             sopGrid.innerHTML += `
                 <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="${delay}">
-                    <article class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl hover:bg-white/15 hover:shadow-2xl transition-all duration-300 overflow-hidden group">
-                        <div class="relative overflow-hidden bg-gradient-to-br from-orange-500/20 to-red-600/20 p-8 flex flex-col items-center">
-                            <span class="inline-flex items-center justify-center h-16 w-16">
-                                <img src='{{ asset('img/ikonrasaumbi.png') }}' alt="ikonrasaumbi" class="h-20 w-20 object-contain">
-                            </span>
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-[#A52A2A] text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    <article class="bg-white/80 backdrop-blur-lg rounded-3xl border border-[#A52A2A]/10 shadow-2xl hover:shadow-[#A52A2A]/30 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 overflow-hidden group">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden rounded-t-3xl bg-gradient-to-br from-orange-500/20 to-red-600/20">
+                            @if(!empty($sop->video))
+                                <video controls class="absolute top-0 left-0 w-full h-full object-cover rounded-t-3xl bg-[#222]">
+                                    <source src="{{ asset('storage') }}/${sop.video}" type="video/mp4">
+                                    Browser Anda tidak mendukung video.
+                                </video>
+                            @else
+                                <img src="{{ asset('img/ikonrasaumbi.png') }}" alt="ikonrasaumbi"
+                                     class="absolute top-0 left-0 w-full h-full object-cover rounded-t-3xl">
+                            @endif
+                            <div class="absolute top-4 left-4 z-10">
+                                <span class="bg-[#A52A2A] text-white text-sm font-bold px-4 py-1 rounded-full shadow-lg tracking-wide">
                                     SOP ${index + 1}
                                 </span>
                             </div>
                         </div>
-                        <div class="p-6 flex flex-col h-full">
-                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#A52A2A] transition-colors duration-300"
+                        <div class="p-7 flex flex-col h-full">
+                            <h3 class="text-2xl font-bold text-[#A52A2A] mb-2 group-hover:text-[#7a1d1d] transition-colors duration-300"
                                 style="font-family: 'Cormorant Garamond', serif;">
                                 ${sop.nama_file}
                             </h3>
-                            <p class="text-gray-300 text-sm mb-4 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                            <p class="text-gray-700 text-base mb-3 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
                                 Tanggal: ${new Date(sop.tanggal).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
                             </p>
-                            <div class="flex items-center text-xs text-gray-400 mb-4">
+                            <div class="flex items-center text-xs text-gray-500 mb-4">
                                 <i class="fas fa-tag mr-1"></i>
                                 <span>Dokumen SOP</span>
                             </div>
-                            <div class="pt-4 border-t border-white/10 flex gap-3">
-                                <a href="{{ asset('storage') }}/${sop.dokumen}" target="_blank" class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-red-500 transition flex items-center">
-                                    <i class="fa-solid fa-book-open mr-2"></i>Baca Selengkapnya
+                            <div class="pt-4 border-t border-[#A52A2A]/10 flex gap-3">
+                                <a href="{{ asset('storage') }}/${sop.dokumen}" target="_blank" class="px-4 py-2 bg-[#A52A2A] text-white rounded-full font-semibold shadow hover:bg-red-600 transition flex items-center gap-2 text-sm">
+                                    <i class="fa-solid fa-book-open"></i>Baca Selengkapnya
                                 </a>
-                                <a href="{{ asset('storage') }}/${sop.dokumen}" download class="inline-block px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition flex items-center" aria-label="Download SOP ${sop.nama_file}">
-                                    <i class="fa-solid fa-download mr-2"></i>Download
+                                <a href="{{ asset('storage') }}/${sop.dokumen}" download class="px-4 py-2 bg-gray-800 text-white rounded-full font-semibold shadow hover:bg-gray-700 transition flex items-center gap-2 text-sm" aria-label="Download SOP ${sop.nama_file}">
+                                    <i class="fa-solid fa-download"></i>Download
                                 </a>
                             </div>
                         </div>
@@ -136,30 +148,36 @@ $initialCount = 6;
             const delay = 200 + (index * 200);
             sopGrid.innerHTML += `
                 <div class="cursor-pointer" data-aos="fade-up" data-aos-delay="${delay}">
-                    <article class="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl hover:bg-white/15 hover:shadow-2xl transition-all duration-300 overflow-hidden group">
-                        <div class="relative overflow-hidden bg-gradient-to-br from-orange-500/20 to-red-600/20 p-8 flex flex-col items-center">
-                            <span class="inline-flex items-center justify-center h-16 w-16">
-                                <img src='{{ asset('img/ikonrasaumbi.png') }}' alt="ikonrasaumbi" class="h-20 w-20 object-contain">
-                            </span>
-                            <div class="absolute top-4 left-4">
-                                <span class="bg-[#A52A2A] text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    <article class="bg-white/80 backdrop-blur-lg rounded-3xl border border-[#A52A2A]/10 shadow-2xl hover:shadow-[#A52A2A]/30 hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 overflow-hidden group">
+                        <div class="relative w-full aspect-[4/3] overflow-hidden rounded-t-3xl bg-gradient-to-br from-orange-500/20 to-red-600/20">
+                            @if(!empty($sop->video))
+                                <video controls class="absolute top-0 left-0 w-full h-full object-cover rounded-t-3xl bg-[#222]">
+                                    <source src="{{ asset('storage') }}/${sop.video}" type="video/mp4">
+                                    Browser Anda tidak mendukung video.
+                                </video>
+                            @else
+                                <img src="{{ asset('img/ikonrasaumbi.png') }}" alt="ikonrasaumbi"
+                                     class="absolute top-0 left-0 w-full h-full object-cover rounded-t-3xl">
+                            @endif
+                            <div class="absolute top-4 left-4 z-10">
+                                <span class="bg-[#A52A2A] text-white text-sm font-bold px-4 py-1 rounded-full shadow-lg tracking-wide">
                                     SOP ${index + 1}
                                 </span>
                             </div>
                         </div>
-                        <div class="p-6 flex flex-col h-full">
-                            <h3 class="text-xl font-bold text-white mb-3 group-hover:text-[#A52A2A] transition-colors duration-300"
+                        <div class="p-7 flex flex-col h-full">
+                            <h3 class="text-2xl font-bold text-[#A52A2A] mb-2 group-hover:text-[#7a1d1d] transition-colors duration-300"
                                 style="font-family: 'Cormorant Garamond', serif;">
                                 ${sop.nama_file}
                             </h3>
-                            <p class="text-gray-300 text-sm mb-4 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                            <p class="text-gray-700 text-base mb-3 leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
                                 Tanggal: ${new Date(sop.tanggal).toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' })}
                             </p>
-                            <div class="flex items-center text-xs text-gray-400 mb-4">
+                            <div class="flex items-center text-xs text-gray-500 mb-4">
                                 <i class="fas fa-tag mr-1"></i>
                                 <span>Dokumen SOP</span>
                             </div>
-                            <div class="mt-auto pt-4 border-t border-white/10 flex gap-3">
+                            <div class="mt-auto pt-4 border-t border-[#A52A2A]/10 flex gap-3">
                                 <a href="{{ asset('storage') }}/${sop.dokumen}" target="_blank"
                                     class="inline-block px-4 py-2 bg-[#A52A2A] text-white rounded hover:bg-[#A52A2A] transition font-semibold text-sm flex items-center">
                                     <i class="fa-solid fa-book-open mr-2"></i>Baca Selengkapnya

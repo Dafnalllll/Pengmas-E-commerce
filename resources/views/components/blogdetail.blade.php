@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/ikonrasaumbi.png">
+    <link rel="icon" type="image/png" href="{{ asset('img/ikonrasaumbi.png') }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kampung Syurga | Blog Detail</title>
+    <title>{{ $blog->title }} | Kampung Syurga</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- AOS Animation CSS -->
@@ -31,37 +31,61 @@
         <section class="max-w-3xl mx-auto bg-white/90 rounded-xl shadow-lg p-8 mt-16 mb-16" data-aos="fade-up">
             <!-- Judul Blog -->
             <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900" style="font-family: 'Cormorant Garamond', serif;">
-                Manfaat Bawang Merah untuk Kesehatan Tubuh
+                {{ $blog->title }}
             </h1>
+
             <!-- Info Penulis & Tanggal -->
             <div class="flex items-center text-gray-600 text-sm mb-6">
-                <span class="mr-2"><i class="fa fa-user"></i> Admin Kampung Syurga</span>
+                <span class="mr-2">
+                    <i class="fa fa-user"></i> {{ $blog->author ?? 'Admin Kampung Syurga' }}
+                </span>
                 <span class="mx-2">|</span>
-                <span><i class="fa fa-calendar"></i> 03 Oktober 2025</span>
+                <span>
+
+                    <i class="fa fa-calendar"></i>
+                    {{ \Carbon\Carbon::parse($blog->created_at)->locale('id')->isoFormat('D MMMM YYYY') }}
+                </span>
             </div>
+
             <!-- Gambar Blog -->
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Gambar Blog" class="w-full h-72 object-cover rounded-lg mb-8 shadow">
+            @if($blog->image)
+                <img src="{{ asset('storage/' . $blog->image) }}"
+                     alt="{{ $blog->title }}"
+                     class="w-full h-72 object-cover rounded-lg mb-8 shadow"
+                     onerror="this.onerror=null; this.src='{{ asset('img/ikonrasaumbi.png') }}';">
+            @else
+                <div class="w-full h-72 bg-gradient-to-br from-orange-500/20 to-red-600/20 flex items-center justify-center rounded-lg mb-8">
+                    <img src="{{ asset('img/ikonrasaumbi.png') }}" alt="Default" class="h-32 opacity-50">
+                </div>
+            @endif
+
             <!-- Isi Blog -->
-            <div class="prose max-w-none text-lg text-gray-800" style="font-family: 'Cormorant Garamond', serif;">
-                <p>
-                    Bawang merah tidak hanya digunakan sebagai bumbu dapur, tetapi juga memiliki banyak manfaat kesehatan. Kandungan antioksidan dan senyawa sulfur di dalamnya dapat membantu meningkatkan sistem imun, menurunkan tekanan darah, dan menjaga kesehatan jantung.
-                </p>
-                <h2>1. Meningkatkan Sistem Imun</h2>
-                <p>
-                    Konsumsi bawang merah secara rutin dapat membantu tubuh melawan infeksi dan penyakit.
-                </p>
-                <h2>2. Menurunkan Tekanan Darah</h2>
-                <p>
-                    Senyawa allicin pada bawang merah efektif menurunkan tekanan darah tinggi.
-                </p>
-                <h2>3. Menjaga Kesehatan Jantung</h2>
-                <p>
-                    Bawang merah membantu menurunkan kadar kolesterol jahat dalam darah.
-                </p>
+            <div class="prose max-w-none text-lg text-gray-800 text-justify prose-p:mb-5" style="font-family: 'Cormorant Garamond', serif;">
+                {!! $blog->content !!}
+            </div>
+
+            <!-- Back Button -->
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <a href="{{ route('blogs') }}"
+                   class="inline-flex items-center gap-2 bg-[#A52A2A] hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105">
+                    <i class="fas fa-arrow-left"></i>
+                    Kembali ke Semua Blog
+                </a>
             </div>
         </section>
-         <!-- Footer -->
+
+        <!-- Footer -->
         <x-footer />
     </main>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>

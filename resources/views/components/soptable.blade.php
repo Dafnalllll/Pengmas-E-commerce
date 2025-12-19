@@ -1,38 +1,3 @@
-{{-- @php
-    // Data dummy untuk SOP
-    $sops = [
-        (object)[
-            'id' => 1,
-            'title' => 'SOP Penjualan Produk',
-            'date' => '2025-01-15',
-            'pdf_url' => 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'
-        ],
-        (object)[
-            'id' => 2,
-            'title' => 'SOP Pengelolaan Inventory',
-            'date' => '2025-02-20',
-            'pdf_url' => 'https://www.africau.edu/images/default/sample.pdf'
-        ],
-        (object)[
-            'id' => 3,
-            'title' => 'SOP Customer Service',
-            'date' => '2025-03-10',
-            'pdf_url' => 'https://scholar.harvard.edu/files/torman_personal/files/samplepdf.pdf'
-        ],
-        (object)[
-            'id' => 4,
-            'title' => 'SOP Quality Control',
-            'date' => '2025-04-05',
-            'pdf_url' => 'https://www.orimi.com/pdf-test.pdf'
-        ],
-        (object)[
-            'id' => 5,
-            'title' => 'SOP Pengiriman Barang',
-            'date' => '2025-05-12',
-            'pdf_url' => 'https://www.learningcontainer.com/wp-content/uploads/2019/09/sample-pdf-file.pdf'
-        ]
-    ];
-@endphp --}}
 @props(['sops'])
 
 <div class="bg-gray-100 p-4 lg:p-6 rounded-lg shadow-lg relative top-10 lg:top-14">
