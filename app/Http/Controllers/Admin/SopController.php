@@ -59,7 +59,7 @@ class SopController extends Controller
     public function edit($id)
     {
         $sop = Sop::findOrFail($id);
-        return view('pages.admin.edit.editsop', compact('sop'));
+        return view('pages.admin.edit.sop', compact('sop'));
     }
 
     public function update(Request $request, $id)
