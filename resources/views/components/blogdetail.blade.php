@@ -64,6 +64,14 @@
                 {!! $blog->content !!}
             </div>
 
+            <!-- Gambar tambahan di bawah isi blog -->
+            <div class="w-full flex justify-center mt-8">
+                <img src="{{ asset('img/blog1.jpeg') }}" alt="Blog 1" class="rounded-lg shadow-lg max-h-96 object-cover">
+            </div>
+            <div class="w-full flex justify-center mt-6">
+                <img src="{{ asset('img/blog2.jpeg') }}" alt="Blog 2" class="rounded-lg shadow-lg max-h-96 object-cover">
+            </div>
+
             <!-- Back Button -->
             <div class="mt-8 pt-6 border-t border-gray-200">
                 <a href="{{ route('blogs') }}"

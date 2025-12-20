@@ -19,7 +19,7 @@
 
                 <div class="space-y-2">
                     <!-- Download Button -->
-                    <button onclick="downloadPDF('{{ $sop->pdf_url }}', '{{ $sop->nama_file }}.pdf')"
+                    <button onclick="downloadPDF('{{ asset('storage/sop/' . $sop->pdf_url) }}', '{{ $sop->nama_file }}.pdf')"
                         class="w-full bg-purple-500 hover:bg-purple-600 text-white py-2 px-3 rounded-lg font-medium transition-all duration-300 text-sm">
                         Download PDF
                     </button>
@@ -69,7 +69,7 @@
                         <td class="py-4 px-4 text-black font-medium">{{ $sop->nama_file }}</td>
                         <td class="py-4 px-4 text-black">{{ $sop->tanggal }}</td>
                         <td class="py-4 px-4 text-center">
-                            <button onclick="downloadPDF('{{ $sop->pdf_url }}', '{{ $sop->nama_file }}.pdf')"
+                            <button onclick="downloadPDF('{{ asset('storage/sop/' . $sop->pdf_url) }}', '{{ $sop->nama_file }}.pdf')"
                                 class="bg-purple-500 hover:bg-purple-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105">
                                 Download PDF
                             </button>

@@ -118,7 +118,7 @@
         ])
 
         <!-- Bottom Footer -->
-        <div class="border-t border-white/20 pt-8" data-aos="fade-down" data-aos-delay="1200">
+        <div class="border-t border-white/20 pt-8" data-aos="fade-down" data-aos-delay="800">
             <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-center md:text-left">
                 <!-- Copyright -->
                 <div class="text-gray-400 text-sm text-center md:text-left">
