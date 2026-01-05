@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kampung Syurga | Contact</title>
-    <!-- Tailwind CSS (CDN for demo) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Vite CSS & JS -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
     <!-- AOS Animation CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <!-- Google Fonts -->

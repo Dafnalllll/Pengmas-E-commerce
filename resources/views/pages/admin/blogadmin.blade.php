@@ -10,7 +10,7 @@
 </head>
 <body class="bg-gray-200 flex flex-col lg:flex-row">
     <!-- Sidebar -->
-    <x-sidebar />
+    <x-sidebar />   
 
     <!-- Main Content -->
     <div class="flex-1 p-4 lg:p-8 pt-16 lg:pt-8">

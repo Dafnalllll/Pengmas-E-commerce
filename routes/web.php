@@ -10,39 +10,40 @@ use App\Http\Controllers\ProfileController;
 use App\Models\Sop; // ← TAMBAHKAN INI
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\MonitoringController;
 
 Route::middleware(['track.page'])->group(function () {
 
-//User Routes
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+    //User Routes
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('welcome');
 
-Route::get('/blog', [FrontendBlogController::class, 'index'])->name('blogs');
-Route::get('/blog/{id}', [FrontendBlogController::class, 'show'])->name('blog.detail');
-// GANTI ROUTE INI (baris 18-20)
-Route::get('/standar-operasional-prosedur', function () {
-    $sops = Sop::latest()->get();
-    return view('pages.user.sop', compact('sops'));
-})->name('sop');
+    Route::get('/blog', [FrontendBlogController::class, 'index'])->name('blogs');
+    Route::get('/blog/{id}', [FrontendBlogController::class, 'show'])->name('blog.detail');
+    // GANTI ROUTE INI (baris 18-20)
+    Route::get('/standar-operasional-prosedur', function () {
+        $sops = Sop::latest()->get();
+        return view('pages.user.sop', compact('sops'));
+    })->name('sop');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/product', [FrontendProductController::class, 'index'])->name('products');
+    Route::get('/product', [FrontendProductController::class, 'index'])->name('products');
 
-Route::get('/contact', function () {
-    return view('pages.user.contact');
-})->name('contact');
+    Route::get('/contact', function () {
+        return view('pages.user.contact');
+    })->name('contact');
 
-Route::get('/blog-detail', function () {
-    return view('components.blogdetail');
-});
+    Route::get('/blog-detail', function () {
+        return view('components.blogdetail');
+    });
 
-Route::get('/sop-detail', function () {
-    return view('components.sopdetail');
-});
+    Route::get('/sop-detail', function () {
+        return view('components.sopdetail');
+    });
 
 });
 
@@ -52,9 +53,13 @@ Route::get('/sop-detail', function () {
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
 
     // Dashboard Admin
-        Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('/', [AdminController::class, 'index'])->name('dashboard');
 
-        Route::get('/statistics', [AdminController::class, 'statistics'])->name('statistics');
+    Route::get('/statistics', [AdminController::class, 'statistics'])->name('statistics');
+
+    // Monitoring Route
+    Route::get('/monitoring', [MonitoringController::class, 'index'])->name('monitoring');
+
 
 
     // Route Produk
